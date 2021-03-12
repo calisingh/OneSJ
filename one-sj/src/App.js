@@ -9,7 +9,7 @@ import Home from "./components/home";
 export default class App extends Component {
   render() {
     return (
-      <div className="content">
+      <div id="App">
         <Switch>
           <Route path="/justins-component" component={JustinsComponent} />
           <Route path="/angelas-component" component={AngelasComponent} />

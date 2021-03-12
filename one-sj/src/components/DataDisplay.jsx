@@ -9,12 +9,10 @@ class DataDisplay extends Component {
     return (
       <CardDeck
         style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "space-evenly",
-          alignContent: "flex-start",
-          alignItems: "flex-start",
+          justifyContent: "flex-start",
+          width: "75%",
+          border: "2px solid black",
+          margin: "0 0 1% 25%",
         }}
       >
         {data.map((data) => (

@@ -11,10 +11,8 @@ export default class CardData extends Component {
         onMouseLeave={this.handleHover}
         border={this.state.hovered ? "primary" : ""}
         style={{
-          flex: "none",
-          width: "25rem",
-          height: "15rem",
-          margin: ".5rem",
+          flex: "0 0 20rem",
+          marginBottom: "1rem",
         }}
       >
         <Card.Header>{data.title}</Card.Header>
@@ -36,6 +34,7 @@ export default class CardData extends Component {
   }
 
   handleHover = () => {
-    this.setState({ hovered: !this.state.hovered });
+    const hover = this.state.hovered ? false : true;
+    this.setState({ hovered: hover });
   };
 }

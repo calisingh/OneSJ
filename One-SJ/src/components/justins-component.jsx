@@ -70,7 +70,7 @@ export default class JustinsComponent extends Component {
                 ></Form.Control>
               </Form.Group>
             </Form>
-            <Filter categories={categories} onFilter={handleFilter}></Filter>
+            {/* <Filter categories={categories} onFilter={handleFilter}></Filter> */}
           </div>
           <DataDisplay data={services} />
           <div display="flex">

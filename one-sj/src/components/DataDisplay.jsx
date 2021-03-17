@@ -16,7 +16,7 @@ class DataDisplay extends Component {
         }}
       >
         {data.map((data) => (
-          <CardData key={data.title} data={data} />
+          <CardData key={data.cartodb_id} data={data} />
         ))}
       </CardDeck>
     );

@@ -11,22 +11,22 @@ export default class CardData extends Component {
         onMouseLeave={this.handleHover}
         border={this.state.hovered ? "primary" : ""}
         style={{
-          flex: "0 0 20rem",
+          flex: "0 0 25rem",
           marginBottom: "1rem",
         }}
       >
-        <Card.Header>{data.title}</Card.Header>
+        <Card.Header>{data.resource}</Card.Header>
         <Card.Body>
-          <Card.Title>{data.title}</Card.Title>
+          <Card.Title>{data.provider_name}</Card.Title>
           <Card.Text>
-            URL:{" "}
-            <a rel="noreferrer" target="_blank" href={"//" + data.url}>
-              {data.url}
-            </a>{" "}
+            URL:
+            <a rel="noreferrer" target="_blank" href={"//" + data.web_link}>
+              {data.web_link}
+            </a>
             <br />
-            Gender: {data.gender} <br />
-            Ethnicity: {data.ethnicity} <br />
-            Takes Insurance? {data.insurance ? "Yes" : "No"}
+            Adress: {data.address}, {data.zip} <br />
+            Phone #: {data.contact} <br />
+            Email: {data.email} <br />
           </Card.Text>
         </Card.Body>
       </Card>

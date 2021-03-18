@@ -3,18 +3,31 @@ import { Link } from "react-router-dom";
 import DataDisplay from "./DataDisplay";
 import PaginationHandler, { paginate } from "./utilities/paginationHandler";
 import Filter from "./utilities/filter";
+import PageSizeHandler from "./utilities/pageSizeHandler";
 import axios from "axios";
-import Form from "react-bootstrap/Form";
 
 export default class JustinsComponent extends Component {
-  state = { data: [], categories: [], currentPage: 1, pageSize: 4 };
+  state = {
+    data: [],
+    filteredData: [],
+    filtered: false,
+    categories: [],
+    currentPage: 1,
+    pageSize: 4,
+  };
 
   componentDidMount() {
     const apiLink =
-      "https://clay-g.carto.com/api/v2/sql?api_key=8TkLxxG_A0KXINCDG3D0wQ&q=SELECT * FROM onesj_services";
+      "https://clay-g.carto.com/api/v2/sql?api_key=KVqWfmnUVH9NiZfJqnEBDw&q=SELECT * FROM onesj_services";
+    const categoryapiLink =
+      "https://clay-g.carto.com/api/v2/sql?api_key=KVqWfmnUVH9NiZfJqnEBDw&q=SELECT * FROM onesj_categories";
     axios.get(apiLink).then((data) => {
       console.log(data.data.rows);
       this.setState({ data: data.data.rows });
+    });
+    axios.get(categoryapiLink).then((categories) => {
+      console.log(categories.data.rows);
+      this.setState({ categories: categories.data.rows });
     });
   }
 
@@ -22,10 +35,41 @@ export default class JustinsComponent extends Component {
     this.setState({ currentPage: page });
   };
 
+  handlePageSizeChange = (id) => {
+    this.setState({ pageSize: document.getElementById(id).value });
+  };
+
+  handleFilter = (checkedCategories) => {
+    if (!checkedCategories.length) {
+      this.setState({ filteredData: [], filtered: false, currentPage: 1 });
+      return;
+    }
+    let newData = [];
+    this.state.data.forEach((service) => {
+      let match = true;
+      checkedCategories.every((category) => {
+        if (!service[category]) {
+          match = false;
+          return false;
+        }
+        return true;
+      });
+      if (match) newData.push(service);
+    });
+    this.setState({ filteredData: newData, filtered: true, currentPage: 1 });
+  };
+
   render() {
-    const { data, categories, currentPage, pageSize } = this.state;
-    const services = paginate(data, currentPage, pageSize);
-    console.log("current page size: " + pageSize);
+    const {
+      data,
+      filteredData,
+      filtered,
+      categories,
+      currentPage,
+      pageSize,
+    } = this.state;
+    const dataToRender = filtered ? filteredData : data;
+    const services = paginate(dataToRender, currentPage, pageSize);
     return (
       <div>
         <div
@@ -53,29 +97,19 @@ export default class JustinsComponent extends Component {
             }}
           >
             <h1>Filter</h1>
-            <Form>
-              <Form.Group>
-                <Form.Label>Current Page Size: {pageSize}</Form.Label>
-                <Form.Control
-                  type="range"
-                  id="rangePrim"
-                  min="2"
-                  max="15"
-                  value={[pageSize]}
-                  onChange={() =>
-                    this.setState({
-                      pageSize: document.getElementById("rangePrim").value,
-                    })
-                  }
-                ></Form.Control>
-              </Form.Group>
-            </Form>
-            {/* <Filter categories={categories} onFilter={handleFilter}></Filter> */}
+            <PageSizeHandler
+              pageSize={pageSize}
+              onPageSizeChange={this.handlePageSizeChange}
+            />
+            <Filter
+              categories={categories}
+              onFilter={this.handleFilter}
+            ></Filter>
           </div>
           <DataDisplay data={services} />
           <div display="flex">
             <PaginationHandler
-              itemCount={data.length}
+              itemCount={filtered ? filteredData.length : data.length}
               pageSize={pageSize}
               currentPage={currentPage}
               onPageChange={this.handlePageChange}

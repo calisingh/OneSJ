@@ -2,21 +2,26 @@ import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 
 export default class Filter extends Component {
+  state = {};
   render() {
     const { categories, onFilter } = this.props;
-    return categories.map((category) => {
-      <Form>
-        <div key={category.name} className="mb-3">
-          <Form.Check
-            type="checkbox"
-            id={category.name}
-            name="category"
-            label={category.name}
-            onChange={onFilter(this.findCheckedCategories())}
-          ></Form.Check>
-        </div>
-      </Form>;
-    });
+    return (
+      <div>
+        {categories.map((category) => (
+          <Form>
+            <div key={category.property_name} className="mb-3">
+              <Form.Check
+                type="checkbox"
+                id={category.property_name}
+                name="category"
+                label={category.name}
+                onClick={() => onFilter(this.findCheckedCategories())}
+              ></Form.Check>
+            </div>
+          </Form>
+        ))}
+      </div>
+    );
   }
 
   findCheckedCategories = () => {

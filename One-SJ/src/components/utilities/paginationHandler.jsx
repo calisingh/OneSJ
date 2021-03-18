@@ -13,6 +13,8 @@ const PaginationHandler = ({
   currentPage,
   onPageChange,
 }) => {
+  if (itemCount === 0) return null;
+
   const pageCount = Math.ceil(itemCount / pageSize);
 
   if (pageCount === 1) return null;

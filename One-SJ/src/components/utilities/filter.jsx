@@ -1,35 +1,37 @@
-import React, { Component } from "react";
+import React from "react";
 import Form from "react-bootstrap/Form";
 
-export default class Filter extends Component {
-  state = {};
-  render() {
-    const { categories, onFilter } = this.props;
-    return (
-      <div>
-        {categories.map((category) => (
-          <Form>
-            <div key={category.property_name} className="mb-3">
-              <Form.Check
-                type="checkbox"
-                id={category.property_name}
-                name="category"
-                label={category.name}
-                onClick={() => onFilter(this.findCheckedCategories())}
-              ></Form.Check>
-            </div>
-          </Form>
-        ))}
-      </div>
-    );
-  }
+// SFC for rendering all the checkboxes for the filter
+const Filter = ({ categories, onFilter }) => {
+  return (
+    <React.Fragment>
+      {/* Create a checkbox for each category provided */}
+      {categories.map((category) => (
+        <Form key={category.property_name}>
+          <div className="mb-2">
+            <Form.Check
+              type="checkbox"
+              id={category.property_name}
+              name="category"
+              label={category.name}
+              onClick={() => onFilter(findCheckedCategories())}
+            ></Form.Check>
+          </div>
+        </Form>
+      ))}
+    </React.Fragment>
+  );
+};
 
-  findCheckedCategories = () => {
-    let checkedCategories = [];
-    const checked = document.querySelectorAll("input[name=category]:checked");
-    checked.forEach((checkbox) => {
-      checkedCategories.push(checkbox.id);
-    });
-    return checkedCategories;
-  };
-}
+// Search all checkboxes with name="category" to see if they are checked
+const findCheckedCategories = () => {
+  let checkedCategories = [];
+  const checked = document.querySelectorAll("input[name=category]:checked");
+  checked.forEach((checkbox) => {
+    // Return the array of category property_names stored in id
+    checkedCategories.push(checkbox.id);
+  });
+  return checkedCategories;
+};
+
+export default Filter;

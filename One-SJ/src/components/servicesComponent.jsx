@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import DataDisplay from "./DataDisplay";
-import PaginationHandler, { paginate } from "./utilities/paginationHandler";
-import Filter from "./utilities/filter";
-import PageSizeHandler from "./utilities/pageSizeHandler";
+import Link from "react-router-dom/Link";
 import axios from "axios";
+import { servicesapiLink, categoriesapiLink } from "./utilities/constants";
+import PageSizeHandler from "./utilities/pageSizeHandler";
+import Filter from "./utilities/filter";
+import DataDisplay from "./dataDisplay";
+import PaginationHandler, { paginate } from "./utilities/paginationHandler";
 
-export default class JustinsComponent extends Component {
+// Component that renders all the data and filter components together
+export default class ServicesComponent extends Component {
   state = {
     data: [],
     filteredData: [],
@@ -17,34 +19,41 @@ export default class JustinsComponent extends Component {
   };
 
   componentDidMount() {
-    const apiLink =
-      "https://clay-g.carto.com/api/v2/sql?api_key=KVqWfmnUVH9NiZfJqnEBDw&q=SELECT * FROM onesj_services";
-    const categoryapiLink =
-      "https://clay-g.carto.com/api/v2/sql?api_key=KVqWfmnUVH9NiZfJqnEBDw&q=SELECT * FROM onesj_categories";
-    axios.get(apiLink).then((data) => {
-      console.log(data.data.rows);
-      this.setState({ data: data.data.rows });
-    });
-    axios.get(categoryapiLink).then((categories) => {
-      console.log(categories.data.rows);
-      this.setState({ categories: categories.data.rows });
-    });
+    // Grabbing both the data and categories from the corresponding apis and setting the state
+    axios
+      .all([axios.get(servicesapiLink), axios.get(categoriesapiLink)])
+      .then((responses) => {
+        this.setState({
+          data: responses[0].data.rows,
+          categories: responses[1].data.rows,
+        });
+      })
+      .catch((e) =>
+        console.err(
+          "There was a problem retrieving the data. Error Reference: " + e
+        )
+      );
   }
 
   handlePageChange = (page) => {
+    // Scroll to top when a page change occurs
+    window.scrollTo(0, 0);
     this.setState({ currentPage: page });
   };
 
-  handlePageSizeChange = (id) => {
-    this.setState({ pageSize: document.getElementById(id).value });
+  handlePageSizeChange = (pageSize) => {
+    this.setState({ pageSize, currentPage: 1 });
   };
 
   handleFilter = (checkedCategories) => {
+    // If user unchecks all categories, reset the state so no filtering occurs
     if (!checkedCategories.length) {
       this.setState({ filteredData: [], filtered: false, currentPage: 1 });
       return;
     }
+    // Represents the new filtered data
     let newData = [];
+    // Check each service to see if it matches all checked categories
     this.state.data.forEach((service) => {
       let match = true;
       checkedCategories.every((category) => {
@@ -54,6 +63,7 @@ export default class JustinsComponent extends Component {
         }
         return true;
       });
+      // If the service matches all checked categories, add it to the newData array
       if (match) newData.push(service);
     });
     this.setState({ filteredData: newData, filtered: true, currentPage: 1 });
@@ -68,16 +78,19 @@ export default class JustinsComponent extends Component {
       currentPage,
       pageSize,
     } = this.state;
+    // Check whether there is filtered data, else use all data
     const dataToRender = filtered ? filteredData : data;
+    // Get the correct page of data to show
     const services = paginate(dataToRender, currentPage, pageSize);
+
     return (
-      <div>
+      <React.Fragment>
+        {/* Dummy Navbar */}
         <div
           style={{
-            //position: "relative",
             border: "2px solid green",
             width: "100%",
-            height: "40%",
+            height: "10vh",
           }}
         >
           <Link style={{ float: "left" }} to="/">
@@ -86,11 +99,10 @@ export default class JustinsComponent extends Component {
           <h1 style={{ textAlign: "center" }}>NAVBAR</h1>
         </div>
         <div>
+          {/* Filter Section */}
           <div
             style={{
-              //position: "absolute",
               width: "25%",
-              height: "85.5%",
               border: "2px solid blue",
               float: "left",
               textAlign: "center",
@@ -106,8 +118,9 @@ export default class JustinsComponent extends Component {
               onFilter={this.handleFilter}
             ></Filter>
           </div>
-          <DataDisplay data={services} />
+          {/* Need a display of flex here to allow for flexbox use in these components */}
           <div display="flex">
+            <DataDisplay data={services} />
             <PaginationHandler
               itemCount={filtered ? filteredData.length : data.length}
               pageSize={pageSize}
@@ -116,7 +129,7 @@ export default class JustinsComponent extends Component {
             />
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

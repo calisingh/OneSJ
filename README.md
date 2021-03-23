@@ -1,4 +1,5 @@
 HELP IS OUT THERE
+
 OneSJ is a web app that points youth/young adults in San José to relevant mental health support options. On our web application, we provide information on mental and physical health resources in and around the Bay Area, which is updated every month. Eventually, we plan to expand with other categories of services, such as nutrition or financial support. Other categories are in-progress! 
 
 We are working with our partners to bring together the best available and up-to-date information in an easy-to-use interface method. 

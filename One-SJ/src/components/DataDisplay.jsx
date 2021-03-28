@@ -1,6 +1,6 @@
 import React from "react";
 import { CardDeck } from "react-bootstrap";
-import CardData from "./cardData";
+import CardData from "./CardData";
 
 // SFC for rendering all the data
 const DataDisplay = ({ data }) => {

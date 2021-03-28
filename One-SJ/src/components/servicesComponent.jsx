@@ -4,7 +4,7 @@ import axios from "axios";
 import { servicesapiLink, categoriesapiLink } from "./utilities/constants";
 import PageSizeHandler from "./utilities/pageSizeHandler";
 import Filter from "./utilities/filter";
-import DataDisplay from "./dataDisplay";
+import DataDisplay from "./DataDisplay";
 import PaginationHandler, { paginate } from "./utilities/paginationHandler";
 
 // Component that renders all the data and filter components together

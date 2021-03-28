@@ -13,9 +13,17 @@ const ModalData = ({ data, setShow, onClose }) => {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title>{data.provider_name}</Modal.Title>
+        <Modal.Title style={{ width: "100%", textAlign: "center" }}>
+          <a rel="noreferrer" target="_blank" href={data.web_link}>
+            {data.provider_name}
+          </a>
+        </Modal.Title>
       </Modal.Header>
-      <Modal.Body>{data.notes}</Modal.Body>
+      <Modal.Body style={{ textAlign: "center", fontSize: "20px" }}>
+        Address: {data.address}, {data.zip} <br />
+        Phone #: {data.contact} <br />
+        Email: {data.email} <br />
+      </Modal.Body>
       <Modal.Footer>
         <Button onClick={() => onClose()}>Close</Button>
       </Modal.Footer>

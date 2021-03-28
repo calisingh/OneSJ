@@ -31,21 +31,13 @@ export default class CardData extends Component {
             flex: "0 0 25rem",
             margin: "1rem 1rem 1rem 1rem",
             cursor: "pointer",
+            textAlign: "center",
           }}
         >
-          <Card.Header>{data.resource}</Card.Header>
+          <Card.Header>Mental Health</Card.Header>
           <Card.Body>
             <Card.Title>{data.provider_name}</Card.Title>
-            <Card.Text>
-              URL:
-              <a rel="noreferrer" target="_blank" href={data.web_link}>
-                {data.web_link}
-              </a>
-              <br />
-              Address: {data.address}, {data.zip} <br />
-              Phone #: {data.contact} <br />
-              Email: {data.email} <br />
-            </Card.Text>
+            <Card.Text>{data.notes}</Card.Text>
           </Card.Body>
         </Card>
       </React.Fragment>

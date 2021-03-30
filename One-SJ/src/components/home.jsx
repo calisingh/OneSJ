@@ -1,20 +1,22 @@
 import React, { Component } from "react";
-import Link from "react-router-dom/Link";
+import background from "../img/SJSU_Building.jpg";
+import NavigationBar from "./navigationBar";
+import Footer from "./footer";
 
 export default class Home extends Component {
   render() {
     return (
-      <ul>
-        <li>
-          <Link to="/services">Services Component</Link>
-        </li>
-        <li>
-          <Link to="/angelas-component">Angelas-Component</Link>
-        </li>
-        <li>
-          <Link to="/kuns-component">Kuns-Component</Link>
-        </li>
-      </ul>
+      <div
+        style={{
+          backgroundImage: `url(${background})`,
+          height: "100vh",
+          backgroundSize: "cover",
+          // filter: "grayscale(100%)",
+        }}
+      >
+        <NavigationBar />
+        <Footer />
+      </div>
     );
   }
 }

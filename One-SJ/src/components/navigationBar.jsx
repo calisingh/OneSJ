@@ -4,7 +4,12 @@ import LanguageIcon from "@material-ui/icons/Language";
 
 const NavigationBar = () => {
   return (
-    <Navbar bg="light" variant="light" fixed="top">
+    <Navbar
+      bg="light"
+      variant="light"
+      fixed="top"
+      style={{ borderRadius: "1px" }}
+    >
       <Navbar.Brand href="/">OneSJ</Navbar.Brand>
       <Nav className="mr-auto">
         <Nav.Link href="#home" active>

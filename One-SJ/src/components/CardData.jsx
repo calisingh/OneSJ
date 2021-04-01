@@ -28,14 +28,16 @@ export default class CardData extends Component {
           onClick={() => this.setState({ showModal: true })}
           border={hovered ? "primary" : ""}
           style={{
-            flex: "0 0 25rem",
+            flex: "0 0 19rem",
             margin: "1rem 1rem 1rem 1rem",
             cursor: "pointer",
             textAlign: "center",
           }}
         >
-          <Card.Header>Mental Health</Card.Header>
-          <Card.Body>
+          <Card.Header style={{ backgroundColor: "rgba(2, 117, 216, 0.25)" }}>
+            Mental Health
+          </Card.Header>
+          <Card.Body style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}>
             <Card.Title>{data.provider_name}</Card.Title>
             <Card.Text>{data.notes}</Card.Text>
           </Card.Body>

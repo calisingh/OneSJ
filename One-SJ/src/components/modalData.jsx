@@ -12,19 +12,28 @@ const ModalData = ({ data, setShow, onClose }) => {
       animation={false}
       centered
     >
-      <Modal.Header closeButton>
+      <Modal.Header
+        closeButton
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
+      >
         <Modal.Title style={{ width: "100%", textAlign: "center" }}>
           <a rel="noreferrer" target="_blank" href={data.web_link}>
             {data.provider_name}
           </a>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body style={{ textAlign: "center", fontSize: "20px" }}>
+      <Modal.Body
+        style={{
+          textAlign: "center",
+          fontSize: "20px",
+          backgroundColor: "rgba(2, 117, 216, 0.25)",
+        }}
+      >
         Address: {data.address}, {data.zip} <br />
         Phone #: {data.contact} <br />
         Email: {data.email} <br />
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}>
         <Button onClick={() => onClose()}>Close</Button>
       </Modal.Footer>
     </Modal>

@@ -24,7 +24,7 @@ export default class Home extends Component {
             style={{
               position: "absolute",
               backgroundColor: "rgba(0, 0, 0, 0.3)",
-              height: "120%",
+              height: "115%",
               width: "100%",
               top: "385px",
             }}

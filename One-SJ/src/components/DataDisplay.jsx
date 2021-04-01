@@ -12,9 +12,8 @@ const DataDisplay = ({ data }) => {
       // More info: https://stackoverflow.com/questions/30489594/prevent-100vw-from-creating-horizontal-scroll
       style={{
         width: "75%",
-        border: "2px solid black",
         margin: "0 0 0 25%",
-        justifyContent: "flex-start",
+        justifyContent: "center",
       }}
     >
       {/* Create a card for each service provided */}

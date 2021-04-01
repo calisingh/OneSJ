@@ -2,8 +2,8 @@
 
 // Services API Link
 export const servicesapiLink =
-  "https://clay-g.carto.com/api/v2/sql?api_key=KVqWfmnUVH9NiZfJqnEBDw&q=SELECT * FROM onesj_services";
+  "https://clay-g.carto.com/api/v2/sql?api_key=_3j0n8pyjv1buIQ1Q7UM2A&q=SELECT * FROM onesj_services";
 
 // Categories API Link
 export const categoriesapiLink =
-  "https://clay-g.carto.com/api/v2/sql?api_key=KVqWfmnUVH9NiZfJqnEBDw&q=SELECT * FROM onesj_categories";
+  "https://clay-g.carto.com/api/v2/sql?api_key=_3j0n8pyjv1buIQ1Q7UM2A&q=SELECT * FROM onesj_categories";

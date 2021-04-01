@@ -1,21 +1,22 @@
 import React, { Component } from "react";
-import Link from "react-router-dom/Link";
 import axios from "axios";
 import { servicesapiLink, categoriesapiLink } from "./utilities/constants";
+import NavigationBar from "./navigationBar";
 import PageSizeHandler from "./utilities/pageSizeHandler";
 import Filter from "./utilities/filter";
 import DataDisplay from "./DataDisplay";
 import PaginationHandler, { paginate } from "./utilities/paginationHandler";
+import Footer from "./footer";
 
 // Component that renders all the data and filter components together
 export default class ServicesComponent extends Component {
   state = {
     data: [],
     filteredData: [],
-    filtered: false,
+    checkedCategories: [],
     categories: [],
     currentPage: 1,
-    pageSize: 4,
+    pageSize: 6,
   };
 
   componentDidMount() {
@@ -45,10 +46,29 @@ export default class ServicesComponent extends Component {
     this.setState({ pageSize, currentPage: 1 });
   };
 
-  handleFilter = (checkedCategories) => {
+  handleFilter = (event) => {
+    // Prepare new array for new list of checked categories
+    let newCheckedCategories = this.state.checkedCategories;
+
+    // Grab category name from the event
+    const categoryName = event.target.name;
+
+    // Check whether to remove category from list or add to list
+    if (newCheckedCategories.includes(categoryName)) {
+      newCheckedCategories = newCheckedCategories.filter(
+        (category) => category !== categoryName
+      );
+    } else {
+      newCheckedCategories.push(categoryName);
+    }
+
     // If user unchecks all categories, reset the state so no filtering occurs
-    if (!checkedCategories.length) {
-      this.setState({ filteredData: [], filtered: false, currentPage: 1 });
+    if (!newCheckedCategories.length) {
+      this.setState({
+        filteredData: [],
+        checkedCategories: newCheckedCategories,
+        currentPage: 1,
+      });
       return;
     }
     // Represents the new filtered data
@@ -56,7 +76,7 @@ export default class ServicesComponent extends Component {
     // Check each service to see if it matches all checked categories
     this.state.data.forEach((service) => {
       let match = true;
-      checkedCategories.every((category) => {
+      newCheckedCategories.every((category) => {
         if (!service[category]) {
           match = false;
           return false;
@@ -66,69 +86,69 @@ export default class ServicesComponent extends Component {
       // If the service matches all checked categories, add it to the newData array
       if (match) newData.push(service);
     });
-    this.setState({ filteredData: newData, filtered: true, currentPage: 1 });
+    this.setState({
+      filteredData: newData,
+      checkedCategories: newCheckedCategories,
+      currentPage: 1,
+    });
   };
 
   render() {
     const {
       data,
       filteredData,
-      filtered,
+      checkedCategories,
       categories,
       currentPage,
       pageSize,
     } = this.state;
     // Check whether there is filtered data, else use all data
-    const dataToRender = filtered ? filteredData : data;
+    const dataToRender = checkedCategories.length ? filteredData : data;
     // Get the correct page of data to show
     const services = paginate(dataToRender, currentPage, pageSize);
 
     return (
       <React.Fragment>
-        {/* Dummy Navbar */}
+        <NavigationBar />
         <div
           style={{
-            border: "2px solid green",
-            width: "100%",
-            height: "10vh",
+            minHeight: "120vh",
           }}
         >
-          <Link style={{ float: "left" }} to="/">
-            Home
-          </Link>
-          <h1 style={{ textAlign: "center" }}>NAVBAR</h1>
-        </div>
-        <div>
           {/* Filter Section */}
-          <div
-            style={{
-              width: "25%",
-              border: "2px solid blue",
-              float: "left",
-              textAlign: "center",
-            }}
-          >
-            <h1>Filter</h1>
-            <PageSizeHandler
-              pageSize={pageSize}
-              onPageSizeChange={this.handlePageSizeChange}
-            />
-            <Filter
-              categories={categories}
-              onFilter={this.handleFilter}
-            ></Filter>
-          </div>
-          {/* Need a display of flex here to allow for flexbox use in these components */}
           <div display="flex">
+            <div
+              style={{
+                width: "25%",
+                float: "left",
+                backgroundColor: "rgba(0, 0, 0, 0.1)",
+                border: "2px solid lightgrey",
+                borderRadius: "5px",
+                textAlign: "center",
+              }}
+            >
+              <PageSizeHandler
+                pageSize={pageSize}
+                onPageSizeChange={this.handlePageSizeChange}
+              />
+              <h4>Categories</h4>
+              <Filter
+                categories={categories}
+                onFilter={this.handleFilter}
+              ></Filter>
+            </div>
             <DataDisplay data={services} />
             <PaginationHandler
-              itemCount={filtered ? filteredData.length : data.length}
+              itemCount={
+                checkedCategories.length ? filteredData.length : data.length
+              }
               pageSize={pageSize}
               currentPage={currentPage}
               onPageChange={this.handlePageChange}
             />
           </div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }

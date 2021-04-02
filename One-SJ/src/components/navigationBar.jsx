@@ -12,7 +12,7 @@ const NavigationBar = () => {
     >
       <Navbar.Brand href="/">OneSJ</Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="#home" active>
+        <Nav.Link href="/" active>
           Home
         </Nav.Link>
         <Nav.Link href="services">Services</Nav.Link>

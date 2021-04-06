@@ -6,7 +6,10 @@ const Footer = () => {
     <Navbar
       bg="light"
       variant="light"
-      style={{ bottom: "0", borderRadius: "1px" }}
+      style={{
+        width: "100%",
+        borderRadius: "1px",
+      }}
     >
       <Nav className="m-auto">Copyright © 2021 OneSJ</Nav>
     </Navbar>

@@ -32,8 +32,8 @@ const PaginationHandler = ({
     // Same thing as mentioned in the dataDisplay file. Refer to that for explanation on why I am putting styling in here.
     <Pagination
       style={{
-        width: "75%",
-        margin: "0 0 0 25%",
+        width: "80%",
+        margin: "0 0 0 20%",
         justifyContent: "center",
       }}
     >

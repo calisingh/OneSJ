@@ -50,7 +50,7 @@ const HelpBanner = () => {
               width: "100%",
               minWidth: "425px",
               minHeight: "350px",
-              maxwidth: "600px",
+              maxwidth: "500px",
               maxHeight: "425px",
               borderRadius: "50px",
             }}

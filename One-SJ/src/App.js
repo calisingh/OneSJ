@@ -5,17 +5,20 @@ import ServicesComponent from "./components/servicesComponent";
 import AngelasComponent from "./components/angelas-component";
 //import NewComponent from "./components/kuns-component";
 import Home from "./components/home";
+import ScrollToTop from "./components/utilities/scrollToTop";
 
 export default class App extends Component {
   render() {
     return (
       <div id="App">
-        <Switch>
-          <Route path="/services" component={ServicesComponent} />
-          <Route path="/angelas-component" component={AngelasComponent} />
-          {/* <Route path="/kuns-component" component={NewComponent} /> */}
-          <Route path="/" component={Home} />
-        </Switch>
+        <ScrollToTop>
+          <Switch>
+            <Route path="/services" component={ServicesComponent} />
+            <Route path="/angelas-component" component={AngelasComponent} />
+            {/* <Route path="/kuns-component" component={NewComponent} /> */}
+            <Route path="/" exact component={Home} />
+          </Switch>
+        </ScrollToTop>
       </div>
     );
   }

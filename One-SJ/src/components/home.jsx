@@ -15,23 +15,28 @@ export default class Home extends Component {
         <div
           style={{
             backgroundImage: `url(${background})`,
-            height: "150vh",
+            height: "215vh",
             backgroundSize: "cover",
           }}
         >
-          <OneSJHeader />
           <div
             style={{
-              position: "absolute",
-              backgroundColor: "rgba(0, 0, 0, 0.3)",
-              height: "115%",
-              width: "100%",
-              top: "385px",
+              backgroundColor: "rgba(0, 0, 0, 0.15)",
+              height: "100%",
             }}
           >
-            <HelpBanner />
-            <GetStartedButton history={this.props.history} />
-            <EmergencyBanner />
+            <OneSJHeader />
+            <div
+              style={{
+                position: "absolute",
+                width: "100%",
+                marginTop: "33%",
+              }}
+            >
+              <HelpBanner />
+              <GetStartedButton history={this.props.history} />
+              <EmergencyBanner />
+            </div>
           </div>
         </div>
         <Footer />

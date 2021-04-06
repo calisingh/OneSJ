@@ -119,7 +119,7 @@ export default class ServicesComponent extends Component {
           <div display="flex">
             <div
               style={{
-                width: "25%",
+                width: "20%",
                 float: "left",
                 backgroundColor: "rgba(0, 0, 0, 0.1)",
                 border: "2px solid lightgrey",

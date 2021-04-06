@@ -7,6 +7,7 @@ const GetStartedButton = ({ history }) => {
     <div
       style={{
         display: "flex",
+        marginTop: "2%",
       }}
     >
       <div

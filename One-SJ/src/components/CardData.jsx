@@ -28,7 +28,7 @@ export default class CardData extends Component {
           onClick={() => this.setState({ showModal: true })}
           border={hovered ? "primary" : ""}
           style={{
-            flex: "0 0 19rem",
+            flex: "0 0 20rem",
             margin: "1rem 1rem 1rem 1rem",
             cursor: "pointer",
             textAlign: "center",

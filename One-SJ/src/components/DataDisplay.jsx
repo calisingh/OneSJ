@@ -11,8 +11,8 @@ const DataDisplay = ({ data }) => {
       // styling out from here and put it in a div in the parent, it will create a horizontal scrollbar as it will go over 100% of the width.
       // More info: https://stackoverflow.com/questions/30489594/prevent-100vw-from-creating-horizontal-scroll
       style={{
-        width: "75%",
-        margin: "0 0 0 25%",
+        width: "80%",
+        margin: "0 0 0 20%",
         justifyContent: "center",
       }}
     >

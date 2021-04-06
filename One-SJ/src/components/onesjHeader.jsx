@@ -8,7 +8,7 @@ const OneSJHeader = () => {
           display: "flex",
           flexDirection: "column",
           position: "relative",
-          top: "110px",
+          top: "10%",
           font: "1rem montserrat",
         }}
       >

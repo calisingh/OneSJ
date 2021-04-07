@@ -8,6 +8,7 @@ import DataDisplay from "./DataDisplay";
 import PaginationHandler, { paginate } from "./utilities/paginationHandler";
 import Footer from "./footer";
 
+
 // Component that renders all the data and filter components together
 export default class ServicesComponent extends Component {
   state = {
@@ -115,6 +116,7 @@ export default class ServicesComponent extends Component {
             minHeight: "120vh",
           }}
         >
+
           {/* Filter Section */}
           <div display="flex">
             <div

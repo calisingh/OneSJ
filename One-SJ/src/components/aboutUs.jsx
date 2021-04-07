@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import background from "../img/BlackMoon.jpg";
+import background from "../img/ColorfulBackground.jpg";
 import NavigationBar from "./navigationBar";
 import Footer from "./footer";
 import OneSJHeader from "./onesjHeader";
@@ -13,14 +13,14 @@ export default class AboutUs extends Component {
         <div
           style={{
             backgroundImage: `url(${background})`,
-            height: "215vh",
+            height: "130vh",
             backgroundSize: "cover",
           }}
         >
           <div
             style={{
               backgroundColor: "rgba(0, 0, 0, 0.15)",
-              height: "100%",
+              height: "50%",
             }}
           >
             <OneSJHeader />
@@ -28,7 +28,7 @@ export default class AboutUs extends Component {
               style={{
                 position: "absolute",
                 width: "100%",
-                marginTop: "33%",
+                marginTop: "10%",
               }}
             >
               <AboutUsParagraph />

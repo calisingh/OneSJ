@@ -16,8 +16,8 @@ const NavigationBar = () => {
           Home
         </Nav.Link>
         <Nav.Link href="services">Services</Nav.Link>
-        <Nav.Link href="/">About Us</Nav.Link>
-        <Nav.Link href="/">Disclaimer</Nav.Link>
+        <Nav.Link href="aboutUs">About Us</Nav.Link>
+        <Nav.Link href="disclaimer">Disclaimer</Nav.Link>
         <Nav.Link href="/">Contact Us</Nav.Link>
       </Nav>
       <Nav className="ml-auto">

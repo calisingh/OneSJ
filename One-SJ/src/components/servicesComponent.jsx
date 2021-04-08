@@ -8,7 +8,6 @@ import DataDisplay from "./DataDisplay";
 import PaginationHandler, { paginate } from "./utilities/paginationHandler";
 import Footer from "./footer";
 
-
 // Component that renders all the data and filter components together
 export default class ServicesComponent extends Component {
   state = {
@@ -116,7 +115,6 @@ export default class ServicesComponent extends Component {
             minHeight: "120vh",
           }}
         >
-
           {/* Filter Section */}
           <div display="flex">
             <div
@@ -134,10 +132,7 @@ export default class ServicesComponent extends Component {
                 onPageSizeChange={this.handlePageSizeChange}
               />
               <h4>Categories</h4>
-              <Filter
-                categories={categories}
-                onFilter={this.handleFilter}
-              ></Filter>
+              <Filter categories={categories} onFilter={this.handleFilter} />
             </div>
             <DataDisplay data={services} />
             <PaginationHandler
@@ -150,6 +145,8 @@ export default class ServicesComponent extends Component {
             />
           </div>
         </div>
+        <div></div>
+
         <Footer />
       </React.Fragment>
     );

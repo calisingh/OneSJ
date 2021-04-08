@@ -1,7 +1,6 @@
 import React from "react";
 import { CardDeck } from "react-bootstrap";
 import CardData from "./CardData";
-import background from "../img/SJSU_Building.jpg";
 
 // SFC for rendering all the data
 const DataDisplay = ({ data }) => {
@@ -15,7 +14,6 @@ const DataDisplay = ({ data }) => {
         width: "80%",
         margin: "0 0 0 20%",
         justifyContent: "center",
-        backgroundImage: `url(${background})`,
       }}
     >
       {/* Create a card for each service provided */}

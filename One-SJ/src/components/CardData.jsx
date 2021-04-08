@@ -29,7 +29,7 @@ export default class CardData extends Component {
           border={hovered ? "primary" : ""}
           style={{
             flex: "0 0 20rem",
-            margin: "1rem 1rem 1rem 1rem",
+            margin: "1.5rem 1rem 1rem 1rem",
             cursor: "pointer",
             textAlign: "center",
           }}

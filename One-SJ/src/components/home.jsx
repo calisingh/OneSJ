@@ -35,17 +35,17 @@ export default class Home extends Component {
             >
               <HelpBanner />
               <GetStartedButton history={this.props.history} />
-            <div
-              style={{
-                position: "absolute",
-                width: "100%",
-                marginTop: "0%",
-              }}
-            >
-              <EmergencyBanner />
+              <div
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  marginTop: "0%",
+                }}
+              >
+                <EmergencyBanner />
+              </div>
             </div>
           </div>
-        </div>
         </div>
         <Footer />
       </React.Fragment>

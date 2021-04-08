@@ -9,7 +9,7 @@ node_modules/
 .eslintcache
 
 # vscode
-.vscode/**
+**/.vscode/
 
 # testing
 /coverage

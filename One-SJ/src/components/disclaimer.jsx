@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import background from "../img/ColorfulBackground.jpg";
+import background from "../img/Black.jpg";
 import NavigationBar from "./navigationBar";
 import Footer from "./footer";
 import OneSJHeader from "./onesjHeader";

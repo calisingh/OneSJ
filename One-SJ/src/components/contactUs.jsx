@@ -2,12 +2,10 @@ import React, { Component } from "react";
 import background from "../img/Black.jpg";
 import NavigationBar from "./navigationBar";
 import Footer from "./footer";
-import HelpBanner from "./helpBanner";
 import OneSJHeader from "./onesjHeader";
-import GetStartedButton from "./getStartedButton";
-import EmergencyBanner from "./emergencyBanner";
+import ContactUsParagraph from "./contactUsParagraph";
 
-export default class Home extends Component {
+export default class ContactUs extends Component {
   render() {
     return (
       <React.Fragment>
@@ -15,7 +13,7 @@ export default class Home extends Component {
         <div
           style={{
             backgroundImage: `url(${background})`,
-            height: "170vh",
+            height: "110vh",
             backgroundSize: "cover",
           }}
         >
@@ -33,17 +31,7 @@ export default class Home extends Component {
                 marginTop: "10%",
               }}
             >
-              <HelpBanner />
-              <GetStartedButton history={this.props.history} />
-              <div
-                style={{
-                  position: "absolute",
-                  width: "100%",
-                  marginTop: "0%",
-                }}
-              >
-                <EmergencyBanner />
-              </div>
+              <ContactUsParagraph />
             </div>
           </div>
         </div>

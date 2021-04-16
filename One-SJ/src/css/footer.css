@@ -1,0 +1,15 @@
+a {
+  color: white;
+}
+a:hover {
+  color: rgb(219, 165, 34);
+}
+.MuiSvgIcon-root {
+  color: white;
+}
+.MuiSvgIcon-root:hover {
+  color: rgb(219, 165, 34);
+}
+.MuiButtonBase-root:hover .MuiSvgIcon-root {
+  color: rgb(219, 165, 34);
+}

@@ -1,16 +1,23 @@
 import React from "react";
+import "../css/navigationBar.css";
 import { Navbar, Nav } from "react-bootstrap";
 import LanguageIcon from "@material-ui/icons/Language";
 
 const NavigationBar = () => {
   return (
     <Navbar
-      bg="light"
-      variant="light"
       fixed="top"
-      style={{ borderRadius: "1px" }}
+      style={{
+        borderRadius: "1px",
+        backgroundColor: "rgba(0, 127, 127, 0.95)",
+      }}
     >
-      <Navbar.Brand href="/">OneSJ</Navbar.Brand>
+      <Navbar.Brand
+        href="/"
+        style={{ textShadow: "5px 5px 0px rgba(0,0,0,0.2)" }}
+      >
+        OneSJ
+      </Navbar.Brand>
       <Nav className="mr-auto">
         <Nav.Link href="/" active>
           Home

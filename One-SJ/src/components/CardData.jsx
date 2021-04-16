@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
 import ModalData from "./modalData";
-import background from "../img/Black.jpg";
 
 // Component that renders cards based on the data given too it
 export default class CardData extends Component {

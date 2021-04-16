@@ -1,39 +1,31 @@
-import React from "react";
-
 const OneSJHeader = () => {
   return (
-    <React.Fragment>
-      <div
+    <div
+      style={{
+        font: "1rem montserrat",
+        textAlign: "center",
+        cursor: "default",
+      }}
+    >
+      <h1
         style={{
-          display: "flex",
-          flexDirection: "column",
-          position: "relative",
-          top: "10%",
-          font: "1rem montserrat",
+          fontWeight: "900",
+          color: "white",
+          fontSize: "6rem",
+          textShadow: "5px 5px 0px rgba(0,0,0,0.2)",
         }}
       >
-        <h1
-          style={{
-            flex: "100%",
-            textAlign: "center",
-            fontWeight: "900",
-            color: "white",
-          }}
-        >
-          ONESJ
-        </h1>
-        <span
-          style={{
-            flex: "100%",
-            textAlign: "center",
-            fontWeight: "300",
-            color: "#ffbb05",
-          }}
-        >
-          FOR THE YOUTH, BY THE YOUTH.
-        </span>
-      </div>
-    </React.Fragment>
+        ONESJ
+      </h1>
+      <span
+        style={{
+          color: "rgb(0, 150, 140)",
+          fontSize: "1.5rem",
+        }}
+      >
+        FOR THE YOUTH, BY THE YOUTH.
+      </span>
+    </div>
   );
 };
 

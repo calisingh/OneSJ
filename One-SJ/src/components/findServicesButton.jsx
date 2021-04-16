@@ -1,23 +1,24 @@
 import Fab from "@material-ui/core/Fab";
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import SearchIcon from "@material-ui/icons/Search";
 
-const GetStartedButton = ({ history }) => {
+const FindServicesButton = ({ history }) => {
   return (
     <Fab
       size="large"
       variant="extended"
-      color="secondary"
+      color="primary"
       style={{
         color: "white",
         fontSize: "1.25rem",
         fontWeight: "900",
+        margin: ".5rem",
       }}
       onClick={() => history.push("/services")}
     >
-      <FavoriteIcon style={{ marginRight: ".5rem", fontSize: "2rem" }} />
-      Get Started
+      <SearchIcon style={{ marginRight: ".5rem", fontSize: "2rem" }} />
+      Find Services
     </Fab>
   );
 };
 
-export default GetStartedButton;
+export default FindServicesButton;

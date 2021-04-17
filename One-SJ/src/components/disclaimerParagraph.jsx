@@ -22,7 +22,7 @@ const DisclaimerParagraph = () => {
             minWidth: "400px",
           }}
         >
-          <h3 style={{ fontWeight: "900" }}>Get More Info On OneSJ</h3>
+          <h3 style={{ fontWeight: "900" }}>Disclaimer</h3>
           <hr
             style={{
               borderTop: "5px solid black",

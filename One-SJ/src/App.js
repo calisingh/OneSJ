@@ -7,6 +7,7 @@ import Home from "./components/home";
 import ScrollToTop from "./components/utilities/scrollToTop";
 import Disclaimer from "./components/disclaimer";
 import ContactUs from "./components/contactUs";
+import Privacy from "./components/privacy";
 
 export default class App extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class App extends Component {
             <Route path="/aboutUs" component={AboutUsComponent} />
             <Route path="/disclaimer" component={Disclaimer} />
             <Route path="/contactUs" component={ContactUs} />
+            <Route path="/privacy" component={Privacy} />
             <Route path="/" exact component={Home} />
           </Switch>
         </ScrollToTop>

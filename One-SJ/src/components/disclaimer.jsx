@@ -13,7 +13,7 @@ export default class Disclaimer extends Component {
         <div
           style={{
             backgroundImage: `url(${background})`,
-            height: "140vh",
+            height: "160vh",
             backgroundSize: "cover",
           }}
         >

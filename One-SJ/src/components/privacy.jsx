@@ -3,9 +3,9 @@ import background from "../img/Black.jpg";
 import NavigationBar from "./navigationBar";
 import Footer from "./footer";
 import OneSJHeader from "./onesjHeader";
-import AboutUsParagraph from "./aboutUsParagraph";
+import PrivacyParagraph from "./privacyParagraph";
 
-export default class AboutUs extends Component {
+export default class Privacy extends Component {
   render() {
     return (
       <React.Fragment>
@@ -13,7 +13,7 @@ export default class AboutUs extends Component {
         <div
           style={{
             backgroundImage: `url(${background})`,
-            height: "150vh",
+            height: "230vh",
             backgroundSize: "cover",
           }}
         >
@@ -31,7 +31,7 @@ export default class AboutUs extends Component {
                 marginTop: "10%",
               }}
             >
-              <AboutUsParagraph />
+              <PrivacyParagraph />
             </div>
           </div>
         </div>

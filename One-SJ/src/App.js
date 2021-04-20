@@ -1,29 +1,28 @@
-import "./App.css";
-import { Component } from "react";
-import { Route, Switch } from "react-router-dom";
-import ServicesComponent from "./components/servicesComponent";
-import AboutUsComponent from "./components/aboutUs";
-import Home from "./components/home";
 import ScrollToTop from "./components/utilities/scrollToTop";
-import Disclaimer from "./components/disclaimer";
-import ContactUs from "./components/contactUs";
-import Privacy from "./components/privacy";
+import { Switch, Route } from "react-router-dom";
+import Home from "./components/pages/homePage/home";
+import Services from "./components/pages/servicesPage/services";
+import AboutUs from "./components/pages/aboutUsPage/aboutUs";
+import Disclaimer from "./components/pages/disclaimerPage/disclaimer";
+import ContactUs from "./components/pages/contactUsPage/contactUs";
+import Privacy from "./components/pages/privacyStatementPage/privacy";
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <ScrollToTop>
-          <Switch>
-            <Route path="/services" component={ServicesComponent} />
-            <Route path="/aboutUs" component={AboutUsComponent} />
-            <Route path="/disclaimer" component={Disclaimer} />
-            <Route path="/contactUs" component={ContactUs} />
-            <Route path="/privacy" component={Privacy} />
-            <Route path="/" exact component={Home} />
-          </Switch>
-        </ScrollToTop>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <>
+      {/* Script for automatically scrolling to top on any page navigation */}
+      <ScrollToTop>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/services" component={Services} />
+          <Route path="/about-us" component={AboutUs} />
+          <Route path="/disclaimer" component={Disclaimer} />
+          <Route path="/contact-us" component={ContactUs} />
+          <Route path="/privacy-statement" component={Privacy} />
+        </Switch>
+      </ScrollToTop>
+    </>
+  );
+};
+
+export default App;

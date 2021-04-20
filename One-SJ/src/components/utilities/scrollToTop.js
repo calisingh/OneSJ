@@ -1,6 +1,7 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect } from "react";
 import { withRouter } from "react-router-dom";
 
+// Script for scrolling to top of page on navigation
 function ScrollToTop({ history, children }) {
   useEffect(() => {
     const unlisten = history.listen(() => {
@@ -11,7 +12,7 @@ function ScrollToTop({ history, children }) {
     };
   }, []);
 
-  return <Fragment>{children}</Fragment>;
+  return <>{children}</>;
 }
 
 export default withRouter(ScrollToTop);

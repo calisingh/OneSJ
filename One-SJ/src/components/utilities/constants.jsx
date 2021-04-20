@@ -1,4 +1,4 @@
-// This is where we can define any constants that might be needed throughout the app
+// Define any constants that might be needed throughout the app
 
 // Services API Link
 export const servicesapiLink =

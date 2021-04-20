@@ -1,0 +1,12 @@
+#top {
+  animation: moving 5s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 297px 0;
+  }
+}

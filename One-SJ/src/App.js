@@ -21,7 +21,6 @@ function useWindowSize() {
   }, []);
   return size;
 }
-
 const App = () => {
   useWindowSize();
   return (

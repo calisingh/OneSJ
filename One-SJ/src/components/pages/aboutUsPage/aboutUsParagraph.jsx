@@ -29,33 +29,38 @@ const AboutUsParagraph = () => {
               opacity: "0.5",
             }}
           />
-          <p>
-            <b>Who we are?</b>
+          <p
+            style={{
+              color: "black",
+            }}
+          >
             <p>
-              We are a volunteer-driven, open-source project to help youth
-              communities navigate the COVID crisis by providing information and
-              resources on mental and physical health. We currently impart 300+
-              resources revolving around youth health but plan to expand our
-              services to providing means on food assistance, shelters,
-              clothing, and medicine. You can find more information on the
-              project, including the source code for replicating the project,
-              from our Github page. We are affiliated with ‘The Mayor’s Office
-              of Technology and Innovation (MOTI)’, leveraging technology to
-              address pressing issues facing our city to improve our residents’
-              livelihoods, opportunities, and city experience with an emphasis
-              on inclusion, equity, and antifragility. Special thanks to CARTO
-              for powering our site.{" "}
+              <b>Who we are?</b>
+              <p>
+                We are a volunteer-driven, open-source project to help youth
+                communities navigate the COVID crisis by providing information
+                and resources on mental and physical health. We currently
+                feature resources revolving around youth health but plan to
+                expand our services to providing means on food assistance,
+                shelters, clothing, and medicine. You can find more information
+                on the project, including the source code for replicating the
+                project, from our Github page. We are affiliated with Mayor Sam
+                Liccardo’s Office of Technology and Innovation (MOTI), which
+                leverages technology to improve our residents’ livelihoods and
+                opportunities with an emphasis on inclusion, equity, and
+                antifragility.{" "}
+              </p>
             </p>
-          </p>
-          <p>
-            <b>About the product.</b>
             <p>
-              OneSJ is a web-application for potentially the 1 million residents
-              of San Jose, some of whom may have exacerbated inequities around
-              internet quality and device access; focused around the youth, it
-              has the potential to become a powerhouse in which the youth of the
-              Bay Area can use to their advantage and get help when they need
-              it.
+              <b>About the product.</b>
+              <p>
+                OneSJ is a web-application for potentially the 1 million
+                residents of San Jose, some of whom may have exacerbated
+                inequities around internet quality and device access; focused
+                around the youth, it has the potential to become a powerhouse in
+                which the youth of the Bay Area can use to their advantage and
+                get help when they need it.
+              </p>
             </p>
           </p>
         </div>

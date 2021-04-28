@@ -16,7 +16,7 @@ const AboutUs = () => {
           placeItems: "center",
           background:
             "linear-gradient(to bottom, rgb(0, 150, 140), rgb(250, 250, 210))",
-          height: "100vh",
+          height: "180vh",
           backgroundSize: "cover",
         }}
       >

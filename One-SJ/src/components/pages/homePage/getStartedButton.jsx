@@ -7,14 +7,9 @@ const GetStartedButton = ({ history }) => {
       size="large"
       variant="extended"
       color="secondary"
-      style={{
-        color: "white",
-        fontSize: "1.25rem",
-        fontWeight: "900",
-      }}
       onClick={() => history.push("/services")}
     >
-      <FavoriteIcon style={{ marginRight: ".5rem", fontSize: "2rem" }} />
+      <FavoriteIcon />
       Get Started
     </Fab>
   );

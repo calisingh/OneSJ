@@ -1,26 +1,37 @@
-.nav-link:hover .MuiSvgIcon-root {
-  color: rgb(219, 165, 34);
-}
-.navbar {
+.navigationBar {
   font: 1rem montserrat;
   font-weight: 300;
+  background-color: rgba(0, 127, 127, 0.95);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
-.navbar .navbar-nav .nav-link {
-  color: white;
-}
-.navbar .navbar-nav .nav-link:hover {
-  color: #dba522;
-}
-.navbar .navbar-nav .nav-link.active {
-  color: #fed701;
-}
-.navbar .navbar-nav .nav-link.active:hover {
-  color: #dba522;
-}
-.navbar .navbar-brand {
+
+.navigationBar .navbar-brand {
   color: white;
   font-weight: 900;
 }
-.navbar .navbar-brand:hover {
-  color: #dba522;
+
+.navigationBar .navbar-nav .nav-link {
+  color: white;
+}
+
+.navigationBar .navbar-nav .nav-link.active {
+  color: rgb(255, 236, 69);
+}
+
+/* Highlight icons on hover */
+.navigationBar .nav-link:hover .MuiSvgIcon-root {
+  color: rgb(219, 165, 34);
+}
+
+.navigationBar .navbar-brand:hover {
+  color: rgb(219, 165, 34);
+}
+
+.navigationBar .navbar-nav .nav-link:hover {
+  color: rgb(219, 165, 34);
+}
+
+.navigationBar .navbar-nav .nav-link.active:hover {
+  color: rgb(219, 165, 34);
 }

@@ -31,7 +31,13 @@ const Map = ({ service }) => {
   };
 
   return (
-    <GoogleMap mapContainerStyle={mapContainerStyle} zoom={15} center={center}>
+    <GoogleMap
+      mapContainerStyle={mapContainerStyle}
+      zoom={15}
+      center={center}
+      // Allow for scrolling to zoom in and out
+      options={{ gestureHandling: "greedy" }}
+    >
       <Marker
         position={center}
         title={service.provider_name}
@@ -43,15 +49,15 @@ const Map = ({ service }) => {
           onCloseClick={() => setSelected(false)}
           options={{ pixelOffset: new window.google.maps.Size(0, -40) }}
         >
-          <div style={{ display: "grid", gap: "1rem" }}>
+          <div className="center">
             <h4>{service.provider_name}</h4>
             <h6>
               Website:{" "}
               <a
+                className="data"
                 rel="noreferrer"
                 target="_blank"
                 href={service.web_link}
-                className="filterAnchor"
               >
                 {service.provider_name}
               </a>

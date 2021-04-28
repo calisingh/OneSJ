@@ -1,4 +1,3 @@
-import background from "../../../img/bright-squares.png";
 import sanjose from "../../../img/SanJose.jfif";
 import { createRef } from "react";
 import Snacks from "./snacks";
@@ -20,15 +19,9 @@ const Home = () => {
       <Snacks topRef={top} emergencyRef={emergency} />
       <NavigationBar />
       <div
+        className="center bgGradientTop"
         ref={top}
-        id="top"
         style={{
-          backgroundImage: `url(${background})`,
-          backgroundColor: "rgb(250, 250, 210)",
-          display: "grid",
-          gridTemplateColumns: "1fr",
-          gap: "1rem",
-          placeItems: "center",
           height: "95vh",
         }}
       >
@@ -36,15 +29,10 @@ const Home = () => {
         <WelcomeBanner />
       </div>
       <div
+        className="center bgGradientBottom"
         id="information"
         style={{
           height: "175vh",
-          background:
-            "linear-gradient(to top, rgb(0, 150, 140), rgb(250, 250, 210))",
-          display: "grid",
-          gridTemplateColumns: "1fr",
-          gap: "1rem",
-          placeItems: "center",
         }}
       >
         <MoreInfoBanner />
@@ -58,11 +46,9 @@ const Home = () => {
         }}
       >
         <div
+          className="center"
           ref={emergency}
           style={{
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            placeItems: "center",
             paddingTop: "3%",
           }}
         >

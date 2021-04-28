@@ -10,6 +10,7 @@ const Snacks = ({ topRef, emergencyRef }) => {
   const [emergency, setEmergency] = useState(true);
   const [scrollTop, setScrollTop] = useState(false);
 
+  // Handles the scrolling dimensions for when scroll to top snack should pop up
   const handleScroll = () => {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
@@ -22,6 +23,7 @@ const Snacks = ({ topRef, emergencyRef }) => {
     }
   };
 
+  // Calls handleScroll whenever user scrolls
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, {
       passive: true,
@@ -34,15 +36,19 @@ const Snacks = ({ topRef, emergencyRef }) => {
   return (
     <>
       <Snackbar
+        className="snack"
+        // Controls where snack pops up
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
         autoHideDuration={15000}
         open={emergency}
+        // Don't close snack if user clicks away
         onClose={(event, reason) => {
           if (reason === "clickaway") {
             return;
           }
           setEmergency(false);
         }}
+        // Controls transition animations
         TransitionComponent={Slide}
       >
         <SnackbarContent
@@ -58,6 +64,7 @@ const Snacks = ({ topRef, emergencyRef }) => {
         />
       </Snackbar>
       <Snackbar
+        className="snack"
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
         open={scrollTop}
         TransitionComponent={Slide}

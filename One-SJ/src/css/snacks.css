@@ -1,11 +1,10 @@
-#root > div.MuiSnackbar-root.MuiSnackbar-anchorOriginBottomRight > div {
-  font: montserrat;
-  font-weight: 500;
-  font-size: 1rem;
+.snack .MuiSnackbarContent-root {
+  font: 0.9rem montserrat;
+  font-weight: 600;
   justify-content: center;
   cursor: pointer;
 }
 
-div.MuiSnackbar-root.MuiSnackbar-anchorOriginBottomRight:hover > div > div {
+.snack:hover .MuiSnackbarContent-root {
   color: rgb(219, 165, 34);
 }

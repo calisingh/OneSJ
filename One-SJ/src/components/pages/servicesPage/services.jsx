@@ -9,6 +9,7 @@ import Filter from "./filter";
 import DataDisplay from "./dataDisplay";
 import PaginationHandler, { paginate } from "./paginationHandler";
 import Footer from "../../reusable/footer";
+import "../../../css/services.css";
 
 // Component that renders all the data and filter components together
 export default class Services extends Component {
@@ -169,43 +170,22 @@ export default class Services extends Component {
     return (
       <>
         <NavigationBar />
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "20% 80%",
-            alignItems: "start",
-            justifyItems: "center",
-            placeContent: "center",
-          }}
-        >
+        <div className="servicesLayout">
           <ServicesShown
             currentPage={currentPage}
             pageSize={pageSize}
             total={dataToRender.length}
           />
           <SearchBar onSearch={this.handleSearch} />
-          <div
-            style={{
-              backgroundColor: "rgba(254, 215, 1, 0.1)",
-              borderRadius: "15px",
-              border: "2px solid rgb(0, 127, 127)",
-              boxShadow:
-                "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
-              padding: "1rem",
-              width: "90%",
-              margin: "1rem 0",
-            }}
-          >
+          <div className="filterBox boxShadow">
             <PageSizeHandler
               pageSize={pageSize}
               onPageSizeChange={this.handlePageSizeChange}
             />
-            <h4 style={{ textAlign: "center", margin: "2rem 0" }}>
-              Categories
-            </h4>
+            <h4 className="services">Categories</h4>
             <Filter categories={categories} onFilter={this.handleFilter} />
           </div>
-          <div style={{ display: "grid", placeItems: "center" }}>
+          <div className="center">
             <DataDisplay data={services} />
             <PaginationHandler
               itemCount={dataToRender.length}

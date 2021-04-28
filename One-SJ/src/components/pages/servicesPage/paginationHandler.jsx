@@ -30,9 +30,8 @@ const PaginationHandler = ({
   return (
     // Same thing as mentioned in the dataDisplay file. Refer to that for explanation on why I am putting styling in here.
     <Pagination
+      className="boxShadow"
       style={{
-        boxShadow:
-          "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
         margin: "1rem 0 2rem 0",
       }}
     >

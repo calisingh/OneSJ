@@ -4,20 +4,12 @@ import RangeSlider from "react-bootstrap-range-slider";
 // SFC for rendering the page size range slider
 const PageSizeHandler = ({ pageSize, onPageSizeChange }) => {
   return (
-    <Form
-      style={{
-        width: "80%",
-        margin: "auto auto",
-        textAlign: "center",
-        font: "1rem montserrat",
-        fontWeight: "500",
-      }}
-    >
+    <Form className="pageSizeHandler">
       {/* Row and Columns used to make label appear on the left hand side */}
       <Form.Group>
         <Form.Label>
           Items Per Page:{" "}
-          <b style={{ color: "rgb(0, 150, 140)", fontSize: "1.25rem" }}>
+          <b style={{ color: "rgb(0, 127, 127)", fontSize: "1.25rem" }}>
             {pageSize}
           </b>
         </Form.Label>

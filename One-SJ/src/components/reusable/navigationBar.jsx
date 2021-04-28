@@ -6,17 +6,8 @@ import "../../css/navigationBar.css";
 const NavigationBar = () => {
   const location = useLocation();
   return (
-    <Navbar
-      fixed="top"
-      style={{
-        borderRadius: "1px",
-        backgroundColor: "rgba(0, 127, 127, 0.95)",
-      }}
-    >
-      <Navbar.Brand
-        href="/"
-        style={{ textShadow: "5px 5px 0px rgba(0,0,0,0.2)" }}
-      >
+    <Navbar className="navigationBar" fixed="top">
+      <Navbar.Brand className="textShadow" href="/">
         OneSJ
       </Navbar.Brand>
       <Nav className="mr-auto">

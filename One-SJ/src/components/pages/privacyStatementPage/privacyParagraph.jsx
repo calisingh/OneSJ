@@ -44,7 +44,7 @@ const PrivacyParagraph = () => {
               <b>Consent</b>
               <p>
                 By using our website, you hereby consent to our Privacy Policy
-                and agree to its terms.
+                and agree to the terms.
               </p>
             </p>
             <p>

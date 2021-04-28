@@ -51,7 +51,7 @@ const ContactUsParagraph = () => {
                 request to access our data by contacting our team at
                 one.sj.moti@gmail.com, and will try to get back to you as soon
                 as possible. The open-source code for OneSJ is protected under
-                the GNU General Public License v3.0. Permissions of this strong
+                the GNU General Public License V3.0. Permissions of this strong
                 copyleft license are conditioned on making available complete
                 source code of licensed works and modifications, which include
                 larger works using a licensed work, under the same license.

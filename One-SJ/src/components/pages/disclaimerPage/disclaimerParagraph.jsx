@@ -62,8 +62,9 @@ const DisclaimerParagraph = () => {
               of this application or website.
             </p>
             <p>
-              OneSJ may modify this disclaimer at any time without notice to you
-              by posting a revised disclaimer on this application or website.
+              OneSJ may modify this disclaimer at any time, without notice to
+              you, by posting a revised disclaimer on this application or
+              website.
             </p>
           </p>
         </div>

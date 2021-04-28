@@ -10,7 +10,6 @@ const Disclaimer = () => {
       <NavigationBar />
       <div
         style={{
-          //backgroundImage: `url(${background})`,
           display: "grid",
           gridTemplateColumns: "1fr",
           placeItems: "center",

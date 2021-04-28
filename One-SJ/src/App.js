@@ -8,6 +8,7 @@ import Disclaimer from "./components/pages/disclaimerPage/disclaimer";
 import ContactUs from "./components/pages/contactUsPage/contactUs";
 import Privacy from "./components/pages/privacyStatementPage/privacy";
 
+/* Attempt at a react hook - temp */
 function useWindowSize() {
   const [size, setSize] = useState([window.innerHeight, window.innerWidth]);
   useEffect(() => {

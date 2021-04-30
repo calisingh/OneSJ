@@ -5,6 +5,7 @@ const EmergencyBanner = () => {
         style={{
           width: "75%",
           color: "white",
+          margin: "1rem",
         }}
       >
         <i>

@@ -4,6 +4,7 @@
   background-color: rgba(0, 127, 127, 0.95);
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  width: 100%;
 }
 
 .navigationBar .navbar-brand {
@@ -34,4 +35,20 @@
 
 .navigationBar .navbar-nav .nav-link.active:hover {
   color: rgb(219, 165, 34);
+}
+
+.navbar-toggler {
+  font-size: 1rem;
+  background-color: white;
+  margin: 0 1rem;
+}
+
+.navbar-toggler:hover {
+  background-color: rgb(219, 165, 34);
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse {
+    order: 0;
+  }
 }

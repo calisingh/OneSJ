@@ -3,7 +3,12 @@ import InfoIcon from "@material-ui/icons/Info";
 
 const MoreInfoButton = () => {
   return (
-    <Fab size="large" variant="extended" color="primary" href="#information">
+    <Fab
+      size="large"
+      variant="extended"
+      color="primary"
+      href="/#informationBanner"
+    >
       <InfoIcon />
       More Info
     </Fab>

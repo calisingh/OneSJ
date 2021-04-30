@@ -4,7 +4,6 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-import RedditIcon from "@material-ui/icons/Reddit";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import logo from "../../img/logo.png";
 import "../../css/footer.css";
@@ -15,7 +14,7 @@ const Footer = () => {
       <div
         className="center"
         style={{
-          gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
         }}
       >
         <SocialButtons />
@@ -54,7 +53,13 @@ const Footer = () => {
         <a href="/disclaimer">Disclaimer</a>
         <a href="/contactus">Contact Us</a>
       </div>
-      <span style={{ color: "white", font: ".75rem montserrat" }}>
+      <span
+        style={{
+          color: "white",
+          font: ".75rem montserrat",
+          textAlign: "center",
+        }}
+      >
         Copyright © 2021 OneSJ, LLC All Rights Reserved.
       </span>
     </Navbar>
@@ -95,14 +100,6 @@ const SocialButtons = () => {
         href="https://www.youtube.com/c/CityOfSanJoseCalifornia/featured"
       >
         <YouTubeIcon />
-      </IconButton>
-      <IconButton
-        className="socialButton"
-        rel="noreferrer"
-        target="_blank"
-        href="https://www.reddit.com/r/SanJose/"
-      >
-        <RedditIcon />
       </IconButton>
       <IconButton
         className="socialButton"

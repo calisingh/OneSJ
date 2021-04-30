@@ -1,9 +1,14 @@
 a {
   color: white;
+  text-align: center;
 }
 
 a:hover {
   color: rgb(219, 165, 34);
+}
+
+span {
+  text-align: center;
 }
 
 h1 {
@@ -33,6 +38,7 @@ p {
 hr {
   border-top: 5px solid rgba(0, 0, 0, 0.5);
   border-radius: 20px;
+  width: 75%;
 }
 
 .textShadow {
@@ -66,7 +72,7 @@ hr {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   padding: 3rem;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .MuiFab-label {
@@ -82,4 +88,48 @@ hr {
 
 .MuiFab-root:hover .MuiFab-label {
   color: rgb(219, 165, 34);
+}
+
+#informationBanner {
+  grid-template-columns: 1fr 1fr;
+  row-gap: 5rem;
+  padding: 10rem 0;
+}
+
+#test {
+  grid-template-columns: 1fr 1fr;
+}
+
+#test1 {
+  width: 75%;
+}
+
+@media (max-width: 1000px) {
+  #informationBanner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  #test {
+    grid-template-columns: 1fr 1fr;
+  }
+  #test1 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .center {
+    gap: 0;
+  }
+  .infoBox {
+    margin: 0.5rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  hr {
+    width: 100%;
+  }
 }

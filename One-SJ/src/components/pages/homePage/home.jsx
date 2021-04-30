@@ -28,13 +28,7 @@ const Home = () => {
         <OneSJHeader />
         <WelcomeBanner />
       </div>
-      <div
-        className="center bgGradientBottom"
-        id="information"
-        style={{
-          height: "175vh",
-        }}
-      >
+      <div className="center bgGradientBottom">
         <MoreInfoBanner />
       </div>
       <div

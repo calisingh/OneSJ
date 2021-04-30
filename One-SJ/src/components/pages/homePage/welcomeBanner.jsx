@@ -4,27 +4,17 @@ import { useHistory } from "react-router-dom";
 
 const WelcomeBanner = () => {
   return (
-    <div className="center">
-      <div
-        className="infoBox center"
-        style={{
-          width: "75%",
-        }}
-      >
+    <div className="center" style={{ margin: "1rem" }}>
+      <div className="infoBox center test1">
         <h3 className="textShadow">Welcome to OneSJ!</h3>
-        <hr
-          style={{
-            width: "75%",
-          }}
-        />
+        <hr />
         <p>
           OneSJ is a website that aims to quickly bring Mental Health resources
           to the San Jose youth!
         </p>
         <div
-          className="center"
+          className="test center"
           style={{
-            gridTemplateColumns: "1fr 1fr",
             width: "100%",
           }}
         >

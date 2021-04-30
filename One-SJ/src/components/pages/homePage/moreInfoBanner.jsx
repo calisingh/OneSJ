@@ -5,21 +5,7 @@ import { useHistory } from "react-router-dom";
 
 const MoreInfoBanner = () => {
   return (
-    <div
-      className="center"
-      style={{
-        gridTemplateColumns: "1fr 1fr",
-      }}
-    >
-      <img
-        className="boxShadow"
-        src={logo}
-        style={{
-          maxWidth: "550px",
-          maxHeight: "550px",
-          borderRadius: "25px",
-        }}
-      />
+    <div id="informationBanner" className="center">
       <div
         className="infoBox center"
         style={{
@@ -27,11 +13,7 @@ const MoreInfoBanner = () => {
         }}
       >
         <h3>HELP IS OUT THERE!</h3>
-        <hr
-          style={{
-            width: "75%",
-          }}
-        />
+        <hr />
         <p>
           OneSJ is a website that points youth/young adults in San José to
           relevant mental health support options. On our website, we provide
@@ -40,6 +22,15 @@ const MoreInfoBanner = () => {
         </p>
         <FindServicesButton history={useHistory()} />
       </div>
+      <img
+        className="boxShadow"
+        src={logo}
+        style={{
+          maxWidth: "65%",
+          borderRadius: "25px",
+          margin: "1rem",
+        }}
+      />
       <div
         className="infoBox center"
         style={{
@@ -47,11 +38,7 @@ const MoreInfoBanner = () => {
         }}
       >
         <h3>LOOKING FOR OTHER RESOURCES?</h3>
-        <hr
-          style={{
-            width: "100%",
-          }}
-        />
+        <hr />
         <p>
           Other categories are in-progress! We plan to eventually expand with
           other categories of services such as food, housing, and financial
@@ -62,8 +49,8 @@ const MoreInfoBanner = () => {
       <img
         src={head}
         style={{
-          maxWidth: "550px",
-          maxHeight: "550px",
+          maxWidth: "65%",
+          margin: "1rem",
         }}
       />
     </div>

@@ -96,32 +96,33 @@ hr {
   padding: 10rem 0;
 }
 
-#test {
-  grid-template-columns: 1fr 1fr;
-}
-
-#test1 {
+#welcomeBanner {
   width: 75%;
 }
 
-@media (max-width: 1000px) {
+#welcomeBannerButtonsContainer {
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1200px) {
   #informationBanner {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 768px) {
-  #test {
-    grid-template-columns: 1fr 1fr;
-  }
-  #test1 {
-    width: 100%;
+  #welcomeBannerButtonsContainer {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 550px) {
+  html {
+    font-size: 85%;
+  }
   .center {
-    gap: 0;
+    gap: 0.5rem;
   }
   .infoBox {
     margin: 0.5rem;
@@ -130,6 +131,9 @@ hr {
     font-size: 5rem;
   }
   hr {
+    width: 100%;
+  }
+  #welcomeBanner {
     width: 100%;
   }
 }

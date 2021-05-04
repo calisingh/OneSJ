@@ -26,7 +26,7 @@ const MoreInfoBanner = () => {
         className="boxShadow"
         src={logo}
         style={{
-          maxWidth: "65%",
+          maxWidth: "75%",
           borderRadius: "25px",
           margin: "1rem",
         }}
@@ -49,7 +49,7 @@ const MoreInfoBanner = () => {
       <img
         src={head}
         style={{
-          maxWidth: "65%",
+          maxWidth: "75%",
           margin: "1rem",
         }}
       />

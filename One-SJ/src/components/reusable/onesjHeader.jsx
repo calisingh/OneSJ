@@ -1,6 +1,6 @@
 const OneSJHeader = () => {
   return (
-    <div className="center">
+    <div className="center" style={{ marginTop: "5rem" }}>
       <h1>ONESJ</h1>
       <span
         style={{

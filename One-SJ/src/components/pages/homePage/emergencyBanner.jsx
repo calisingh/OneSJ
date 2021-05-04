@@ -23,7 +23,6 @@ const EmergencyBanner = () => {
       <a
         href="tel:18002738255"
         style={{
-          color: "white",
           font: "2rem montserrat",
           fontWeight: "bold",
         }}

@@ -36,6 +36,7 @@ const Home = () => {
           backgroundImage: `url(${sanjose})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          filter: "grayscale(0.5)",
           height: "70vh",
         }}
       >

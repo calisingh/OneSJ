@@ -185,7 +185,7 @@ export default class Services extends Component {
             <h4 className="services">Categories</h4>
             <Filter categories={categories} onFilter={this.handleFilter} />
           </div>
-          <div className="center">
+          <div className="center" style={{ width: "100%" }}>
             <DataDisplay data={services} />
             <PaginationHandler
               itemCount={dataToRender.length}

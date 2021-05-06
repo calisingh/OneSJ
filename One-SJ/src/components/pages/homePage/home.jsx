@@ -37,7 +37,7 @@ const Home = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           filter: "grayscale(0.5)",
-          height: "70vh",
+          height: "80vh",
         }}
       >
         <div

@@ -32,7 +32,7 @@ const PaginationHandler = ({
     <Pagination
       className="boxShadow"
       style={{
-        margin: "1rem 0 2rem 0",
+        marginBottom: "2rem",
       }}
     >
       <Pagination.Prev

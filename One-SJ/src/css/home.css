@@ -90,7 +90,7 @@ hr {
   color: rgb(219, 165, 34);
 }
 
-#informationBanner {
+.informationBanner {
   grid-template-columns: 1fr 1fr;
   row-gap: 5rem;
   padding: 10rem 0;
@@ -106,7 +106,7 @@ hr {
 }
 
 @media (max-width: 1200px) {
-  #informationBanner {
+  .informationBanner {
     grid-template-columns: 1fr;
   }
 }

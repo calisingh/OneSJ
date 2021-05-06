@@ -5,8 +5,9 @@ import { useHistory } from "react-router-dom";
 
 const MoreInfoBanner = () => {
   return (
-    <div id="informationBanner" className="center">
+    <div className="informationBanner center">
       <div
+        id="more-info"
         className="infoBox center"
         style={{
           width: "90%",
@@ -26,7 +27,7 @@ const MoreInfoBanner = () => {
         className="boxShadow"
         src={logo}
         style={{
-          maxWidth: "75%",
+          maxWidth: "65%",
           borderRadius: "25px",
           margin: "1rem",
         }}
@@ -49,7 +50,7 @@ const MoreInfoBanner = () => {
       <img
         src={head}
         style={{
-          maxWidth: "75%",
+          maxWidth: "65%",
           margin: "1rem",
         }}
       />

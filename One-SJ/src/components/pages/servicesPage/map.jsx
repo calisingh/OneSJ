@@ -5,6 +5,7 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 import { useState } from "react";
+import DirectionsIcon from "@material-ui/icons/Directions";
 
 const Map = ({ service }) => {
   const [selected, setSelected] = useState(true);
@@ -63,6 +64,19 @@ const Map = ({ service }) => {
               </a>
             </h6>
             <h6>Address: {service.address}</h6>
+            <h6>
+              <a
+                className="data"
+                rel="noreferrer"
+                target="_blank"
+                href={
+                  "https://www.google.com/maps/dir//" +
+                  service.address.replace(/ /g, "+")
+                }
+              >
+                Get Directions <DirectionsIcon />
+              </a>
+            </h6>
             <h6>Phone Number: {service.contact}</h6>
             <h6>Email: {service.email}</h6>
           </div>

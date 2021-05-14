@@ -1,0 +1,19 @@
+p.aboutUs {
+  font: 1.5rem montserrat;
+  text-align: center;
+  line-height: 1.6;
+}
+
+h4.aboutUs {
+  font: 2rem montserrat;
+}
+
+.aboutUsParagraph {
+  width: 60%;
+}
+
+@media (max-width: 500px) {
+  p.aboutUs {
+    font-size: 1rem;
+  }
+}

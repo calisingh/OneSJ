@@ -1,0 +1,20 @@
+p.contactUs {
+    font: 1.5rem montserrat;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  h4.contactUs {
+    font: 2rem montserrat;
+  }
+  
+  .contactUsParagraph {
+    width: 60%;
+  }
+  
+  @media (max-width: 500px) {
+    p.contactUs {
+      font-size: 1rem;
+    }
+  }
+  

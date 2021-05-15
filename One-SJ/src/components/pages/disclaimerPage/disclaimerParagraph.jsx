@@ -9,7 +9,6 @@ const DisclaimerParagraph = () => {
       >
         <h3>Disclaimer</h3>
         <hr />
-
         <p className="disclaimer">
           OneSJ is a volunteer-driven project and we work hard to keep this site
           as up-to-date and accurate as possible. Here, you can find the right

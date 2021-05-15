@@ -16,15 +16,14 @@ const PrivacyParagraph = () => {
           additional questions or require more information about our Privacy
           Policy, do not hesitate to contact us.
         </p>
-
-        <p>
+        <p className="privacy">
           <b>Consent</b>
-          <p>
+          <p className="privacy">
             By using our website, you hereby consent to our Privacy Policy and
             agree to the terms.
           </p>
         </p>
-        <p>
+        <p className="privacy">
           <b>Information we collect.</b>
           <p className="privacy">
             No personal information is asked for the user to provide. If you
@@ -35,7 +34,7 @@ const PrivacyParagraph = () => {
           </p>
         </p>
 
-        <p>
+        <p className="privacy">
           <b>How we use your information.</b>
           <p className="privacy">
             We use the information we collect in various ways, including to:
@@ -47,9 +46,9 @@ const PrivacyParagraph = () => {
           </p>
         </p>
 
-        <p>
+        <p className="privacy">
           <b>Information we collect.</b>
-          <p>
+          <p className="privacy">
             No personal information is asked for the user to provide. If you
             contact us directly, we may receive additional information about you
             such as your name, email address, phone number, the contents of the
@@ -58,7 +57,7 @@ const PrivacyParagraph = () => {
           </p>
         </p>
 
-        <p>
+        <p className="privacy">
           <b>Third-Party Privacy Policies.</b>
           <p className="privacy">
             OneSJ's Privacy Policy does not apply to other advertisers or
@@ -74,7 +73,7 @@ const PrivacyParagraph = () => {
             </p>
           </p>
         </p>
-        <p>
+        <p className="privacy">
           <b>Log Files.</b>
           <p className="privacy">
             OneSJ follows a standard procedure of using log files. These files
@@ -87,7 +86,7 @@ const PrivacyParagraph = () => {
           </p>
         </p>
 
-        <p>
+        <p className="privacy">
           <b>Minor Information.</b>
           <p className="privacy">
             Another part of our priority is adding protection for minors using

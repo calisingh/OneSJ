@@ -17,7 +17,7 @@ const ContactUsParagraph = () => {
             <b>form.</b>
           </a>
         </p>
-        <p>
+        <p className="contactUs">
           On our web application, we provide information on mental and physical
           health resources in and around the Bay Area, you may request to access
           our data by contacting our team at one.sj.moti@gmail.com, and will try

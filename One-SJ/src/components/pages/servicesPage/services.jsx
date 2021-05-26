@@ -2,6 +2,7 @@ import { Component } from "react";
 import axios from "axios";
 import { servicesapiLink, categoriesapiLink } from "../../utilities/constants";
 import NavigationBar from "../../reusable/navigationBar";
+import InsuredSnack from "./insuredSnack";
 import ServicesShown from "./servicesShown";
 import SearchBar from "./searchBar";
 import PageSizeHandler from "./pageSizeHandler";
@@ -170,6 +171,7 @@ export default class Services extends Component {
     return (
       <>
         <NavigationBar />
+        <InsuredSnack />
         <div className="servicesLayout">
           <ServicesShown
             currentPage={currentPage}

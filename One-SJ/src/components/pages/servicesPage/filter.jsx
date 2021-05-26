@@ -9,6 +9,7 @@ const Filter = ({ categories, onFilter }) => {
       {/* Create a checkbox for each category provided */}
       {categories.map((category) => (
         <FormControlLabel
+          className="categoryLabel"
           control={
             <Checkbox
               name={category.property_name}

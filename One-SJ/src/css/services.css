@@ -82,6 +82,10 @@ span.servicesShown {
   color: rgb(0, 127, 127);
 }
 
+.categoryLabel .MuiTypography-root {
+  text-align: left;
+}
+
 /* Styling for the anchors having to do with data */
 a.data {
   color: rgb(219, 165, 34);

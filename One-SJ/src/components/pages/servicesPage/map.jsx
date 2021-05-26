@@ -56,7 +56,7 @@ const Map = ({ service }) => {
               Website:{" "}
               <a
                 className="data"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 href={service.web_link}
               >
@@ -67,7 +67,7 @@ const Map = ({ service }) => {
             <h6>
               <a
                 className="data"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 href={
                   "https://www.google.com/maps/dir//" +

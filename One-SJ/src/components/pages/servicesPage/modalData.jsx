@@ -17,7 +17,7 @@ const ModalData = ({ data, setShow, onClose }) => {
             Website:{" "}
             <a
               className="data"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               href={data.web_link}
             >
@@ -30,7 +30,7 @@ const ModalData = ({ data, setShow, onClose }) => {
           <h5>
             <a
               className="data"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               href={
                 "https://www.google.com/maps/dir//" +

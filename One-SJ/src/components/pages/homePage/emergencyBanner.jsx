@@ -21,6 +21,7 @@ const EmergencyBanner = () => {
         </i>
       </p>
       <a
+        rel="noopener noreferrer"
         href="tel:18002738255"
         style={{
           font: "2rem montserrat",

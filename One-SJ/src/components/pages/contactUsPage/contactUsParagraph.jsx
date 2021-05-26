@@ -13,7 +13,10 @@ const ContactUsParagraph = () => {
           For questions on any data additions, inaccuracies, or for any other
           comments, questions, and concerns, please contact
           one.sj.moti@gmail.com or fill out this{" "}
-          <a href="https://forms.gle/hMTFsPH2cuj8mKmr5">
+          <a
+            rel="noopener noreferrer"
+            href="https://forms.gle/hMTFsPH2cuj8mKmr5"
+          >
             <b>form.</b>
           </a>
         </p>

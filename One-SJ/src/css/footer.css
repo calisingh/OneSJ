@@ -2,14 +2,3 @@
   background-color: rgba(0, 127, 127, 0.95);
   height: 50vh;
 }
-
-/* Highlight when social button is hovered */
-.socialButton:hover > .MuiIconButton-label > .MuiSvgIcon-root {
-  color: rgb(219, 165, 34);
-}
-
-/* Set default color and size of social button */
-.socialButton > .MuiIconButton-label > .MuiSvgIcon-root {
-  color: white;
-  font-size: 2rem;
-}

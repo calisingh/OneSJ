@@ -12,8 +12,41 @@ h4.aboutUs {
   width: 60%;
 }
 
+.meetTheTeamContainer {
+  width: 60%;
+  margin-bottom: 5rem;
+}
+
+.bioCardsContainer {
+  gap: 5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.MuiCard-root.bioCard {
+  height: 25rem;
+  width: 20rem;
+  background-color: rgba(250, 250, 210, 0.9);
+  border-radius: 1rem;
+}
+
+.MuiAvatar-root.bioCard {
+  width: 10rem;
+  height: 10rem;
+}
+
+h5.bioCard {
+  color: rgb(0, 127, 127);
+}
+
 @media (max-width: 500px) {
   p.aboutUs {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .bioCardsContainer {
+    gap: 2rem;
+    grid-template-columns: 1fr;
   }
 }

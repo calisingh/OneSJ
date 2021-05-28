@@ -6,7 +6,7 @@ We’ve grown with the support of Mayor Sam Liccardo’s Digital Action Corps, a
 ## About the product.
 OneSJ is a web-application for potentially the 1 million residents of San Jose, some of whom may have exacerbated inequities around internet quality and device access; focused around the youth, it has the potential to become a powerhouse in which the youth of the Bay Area can use to their advantage and get help when they need it.
 
-# Thanks
+## Thanks
 Special thanks to CARTO for powering our site, Mayor Sam Liccardo for bringing us together through the Digital Action Corps, BayAreaCommunity.org and unBox for providing us access to services data and your engineering/design feedback, Code for San José for your insights on designing for accessibility, and Google.org, SAP, and PayPal for providing mentorship and helpful feedback, and the community members who shared their pain points with us and tested the product.
 
 # Disclaimer
@@ -22,10 +22,10 @@ On our web application, we provide information on mental and physical health res
 # Privacy Statement
 At OneSJ.org, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by OneSJ and how we use it. If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
 
-# Consent
+## Consent
 By using our website, you hereby consent to our Privacy Policy and agree to its terms.
 
-# Information we collect.
+## Information we collect.
 No personal information is asked for the user to provide. If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.
 - How we use your information.
 - We use the information we collect in various ways, including to:

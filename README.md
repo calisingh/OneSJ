@@ -3,10 +3,10 @@ We are a volunteer-driven, open-source project to help youth communities access 
 
 We’ve grown with the support of Mayor Sam Liccardo’s Digital Action Corps, an initiative which enables homegrown innovation talent to solve city problems. 
 
-# About the product.
+## About the product.
 OneSJ is a web-application for potentially the 1 million residents of San Jose, some of whom may have exacerbated inequities around internet quality and device access; focused around the youth, it has the potential to become a powerhouse in which the youth of the Bay Area can use to their advantage and get help when they need it.
 
-# Thanks
+## Thanks
 Special thanks to CARTO for powering our site, Mayor Sam Liccardo for bringing us together through the Digital Action Corps, BayAreaCommunity.org and unBox for providing us access to services data and your engineering/design feedback, Code for San José for your insights on designing for accessibility, and Google.org, SAP, and PayPal for providing mentorship and helpful feedback, and the community members who shared their pain points with us and tested the product.
 
 # Disclaimer
@@ -22,10 +22,10 @@ On our web application, we provide information on mental and physical health res
 # Privacy Statement
 At OneSJ.org, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by OneSJ and how we use it. If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
 
-# Consent
+## Consent
 By using our website, you hereby consent to our Privacy Policy and agree to its terms.
 
-# Information we collect.
+## Information we collect.
 No personal information is asked for the user to provide. If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.
 - How we use your information.
 - We use the information we collect in various ways, including to:
@@ -37,14 +37,6 @@ No personal information is asked for the user to provide. If you contact us dire
 
 OneSJ's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.
 You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.
-
-# Log Files.
-OneSJ follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files includes referring/exit pages, time spent on the website, and the number of clicks on the components. The purpose of the information is for analyzing trends, administering the site, and tracking users' movement on the website.
-Minor Information.
-
-Another part of our priority is adding protection for minors using the site. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
-
-OneSJ does not knowingly collect any Personal Identifiable Information from children. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
 
 # Getting Started with Create React App
 

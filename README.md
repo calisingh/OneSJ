@@ -3,7 +3,7 @@ We are a volunteer-driven, open-source project to help youth communities access 
 
 We’ve grown with the support of Mayor Sam Liccardo’s Digital Action Corps, an initiative which enables homegrown innovation talent to solve city problems. 
 
-About the product.
+# About the product.
 OneSJ is a web-application for potentially the 1 million residents of San Jose, some of whom may have exacerbated inequities around internet quality and device access; focused around the youth, it has the potential to become a powerhouse in which the youth of the Bay Area can use to their advantage and get help when they need it.
 
 # Thanks

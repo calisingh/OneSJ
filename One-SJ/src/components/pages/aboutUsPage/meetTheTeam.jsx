@@ -18,16 +18,16 @@ const MeetTheTeam = () => {
           title="Lead Software Developer"
         />
         <BioCard
+          headshot={kun}
+          name="Kunwarpreet Singh Behar"
+          title="Software Developer"
+        />
+        <BioCard headshot={flor} name="Flor Sario" title="Data and Marketing" />
+        <BioCard
           headshot={angela}
           name="Angela Pham"
           title="Software Developer"
         />
-        <BioCard
-          headshot={kun}
-          name="Kunwarpreet Singh Bahar"
-          title="Software Developer"
-        />
-        <BioCard headshot={flor} name="Flor Sario" title="Data and Marketing" />
       </div>
     </>
   );

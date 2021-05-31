@@ -22,21 +22,6 @@ const Footer = () => {
         />
         <h3>OneSJ</h3>
       </div>
-      <h6 className="footer">
-        Special thanks to{" "}
-        <a rel="noopener noreferrer" target="_blank" href="https://carto.com">
-          Carto.com
-        </a>{" "}
-        and{" "}
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://bayareacommunity.org"
-        >
-          BayAreaCommunity.org
-        </a>{" "}
-        for helping bring this website to life!
-      </h6>
       <hr
         style={{
           borderTop: "5px solid rgba(255, 236, 69, 0.7)",

@@ -26,7 +26,7 @@ const MeetTheTeam = () => {
         />
         <BioCard
           headshot={kun}
-          name="Kunwarpreet Singh Bahar"
+          name="Kunwarpreet Singh Behar"
           linkedin="https://www.linkedin.com/in/kunbehar/"
           title="Software Developer"
         />

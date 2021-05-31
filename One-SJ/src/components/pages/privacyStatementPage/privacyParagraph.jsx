@@ -45,18 +45,6 @@ const PrivacyParagraph = () => {
             <li>Find and prevent fraud</li>
           </p>
         </p>
-
-        <p className="privacy">
-          <b>Information we collect.</b>
-          <p className="privacy">
-            No personal information is asked for the user to provide. If you
-            contact us directly, we may receive additional information about you
-            such as your name, email address, phone number, the contents of the
-            message and/or attachments you may send us, and any other
-            information you may choose to provide.
-          </p>
-        </p>
-
         <p className="privacy">
           <b>Third-Party Privacy Policies.</b>
           <p className="privacy">

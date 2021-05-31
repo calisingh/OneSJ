@@ -27,11 +27,23 @@ h4.aboutUs {
   width: 20rem;
   background-color: rgba(250, 250, 210, 0.9);
   border-radius: 1rem;
+  gap: 0;
 }
 
 .MuiAvatar-root.bioCard {
   width: 10rem;
   height: 10rem;
+}
+
+/* Highlight when social button is hovered */
+.socialButton:hover > .MuiIconButton-label > .MuiSvgIcon-root {
+  color: rgb(219, 165, 34);
+}
+
+/* Set default color and size of social button */
+.socialButton > .MuiIconButton-label > .MuiSvgIcon-root {
+  color: rgb(14, 118, 168);
+  font-size: 2rem;
 }
 
 h5.bioCard {

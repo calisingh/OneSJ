@@ -5,7 +5,7 @@ import Home from "./components/pages/homePage/home";
 import Services from "./components/pages/servicesPage/services";
 import AboutUs from "./components/pages/aboutUsPage/aboutUs";
 import Disclaimer from "./components/pages/disclaimerPage/disclaimer";
-import ContactUs from "./components/pages/contactUsPage/contactUs";
+import Feedback from "./components/pages/feedbackPage/feedback";
 import Privacy from "./components/pages/privacyStatementPage/privacy";
 
 /* Attempt at a react hook - temp */
@@ -33,7 +33,7 @@ const App = () => {
           <Route path="/services" component={Services} />
           <Route path="/about-us" component={AboutUs} />
           <Route path="/disclaimer" component={Disclaimer} />
-          <Route path="/contact-us" component={ContactUs} />
+          <Route path="/feedback" component={Feedback} />
           <Route path="/privacy-statement" component={Privacy} />
         </Switch>
       </ScrollToTop>

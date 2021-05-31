@@ -1,4 +1,4 @@
-const ContactUsParagraph = () => {
+const FeedbackParagraph = () => {
   return (
     <>
       <div
@@ -9,18 +9,19 @@ const ContactUsParagraph = () => {
       >
         <h3>Contact us!</h3>
         <hr />
-        <p className="contactUs">
+        <p className="feedback">
           For questions on any data additions, inaccuracies, or for any other
           comments, questions, and concerns, please contact
           one.sj.moti@gmail.com or fill out this{" "}
           <a
             rel="noopener noreferrer"
+            target="_blank"
             href="https://forms.gle/hMTFsPH2cuj8mKmr5"
           >
             <b>form.</b>
           </a>
         </p>
-        <p className="contactUs">
+        <p className="feedback">
           On our web application, we provide information on mental and physical
           health resources in and around the Bay Area, you may request to access
           our data by contacting our team at one.sj.moti@gmail.com, and will try
@@ -35,4 +36,4 @@ const ContactUsParagraph = () => {
   );
 };
 
-export default ContactUsParagraph;
+export default FeedbackParagraph;

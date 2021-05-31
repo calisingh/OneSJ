@@ -29,7 +29,7 @@ const InsuredSnack = () => {
       >
         <SnackbarContent
           style={{
-            backgroundColor: "rgb(0, 150, 140)",
+            backgroundColor: "#0275d8",
           }}
           message={"Uninsured? Click here"}
           onClick={() => {

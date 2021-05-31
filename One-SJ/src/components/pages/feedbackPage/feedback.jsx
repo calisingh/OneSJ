@@ -1,20 +1,20 @@
 import NavigationBar from "../../reusable/navigationBar";
 import OneSJHeader from "../../reusable/onesjHeader";
-import ContactUsParagraph from "./contactUsParagraph";
+import FeedbackParagraph from "./feedbackParagraph";
 import Footer from "../../reusable/footer";
-import "../../../css/contactUs.css";
+import "../../../css/feedback.css";
 
-const ContactUs = () => {
+const Feedback = () => {
   return (
     <>
       <NavigationBar />
       <div className="bgGradientTop center" style={{ gap: "5rem" }}>
         <OneSJHeader />
-        <ContactUsParagraph />
+        <FeedbackParagraph />
       </div>
       <Footer />
     </>
   );
 };
 
-export default ContactUs;
+export default Feedback;

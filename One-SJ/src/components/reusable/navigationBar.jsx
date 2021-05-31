@@ -28,11 +28,8 @@ const NavigationBar = () => {
           >
             Disclaimer
           </Nav.Link>
-          <Nav.Link
-            href="/contact-us"
-            active={location.pathname === "/contact-us"}
-          >
-            Contact Us
+          <Nav.Link href="/feedback" active={location.pathname === "/feedback"}>
+            Feedback
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

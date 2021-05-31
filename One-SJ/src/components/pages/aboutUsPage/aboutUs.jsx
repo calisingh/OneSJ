@@ -16,7 +16,7 @@ const AboutUs = () => {
       <div
         className="bgGradientBottom center"
         style={{
-          padding: "10rem 0",
+          padding: "25rem 0 10rem 0",
         }}
       >
         <MeetTheTeam />

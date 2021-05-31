@@ -4,7 +4,7 @@ import "../../css/footer.css";
 
 const Footer = () => {
   return (
-    <Navbar className="footer center boxShadow">
+    <Navbar className="footerContainer center boxShadow">
       <div
         className="center"
         style={{
@@ -22,6 +22,21 @@ const Footer = () => {
         />
         <h3>OneSJ</h3>
       </div>
+      <h6 className="footer">
+        Special thanks to{" "}
+        <a rel="noopener noreferrer" target="_blank" href="https://carto.com">
+          Carto.com
+        </a>{" "}
+        and{" "}
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://bayareacommunity.org"
+        >
+          BayAreaCommunity.org
+        </a>{" "}
+        for helping bring this website to life!
+      </h6>
       <hr
         style={{
           borderTop: "5px solid rgba(255, 236, 69, 0.7)",
@@ -37,7 +52,7 @@ const Footer = () => {
       >
         <a href="/privacy-statement">Privacy Policy</a>
         <a href="/disclaimer">Disclaimer</a>
-        <a href="/contactus">Contact Us</a>
+        <a href="/feedback">Feedback</a>
       </div>
       <span
         style={{

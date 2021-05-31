@@ -1,19 +1,19 @@
-p.contactUs {
+p.feedback {
   font: 1.5rem montserrat;
   text-align: center;
   line-height: 1.6;
 }
 
-h4.contactUs {
+h4.feedback {
   font: 2rem montserrat;
 }
 
-.contactUsParagraph {
+.feedbackParagraph {
   width: 60%;
 }
 
 @media (max-width: 500px) {
-  p.contactUs {
+  p.feedback {
     font-size: 1rem;
   }
 }

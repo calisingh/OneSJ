@@ -15,19 +15,27 @@ const MeetTheTeam = () => {
         <BioCard
           headshot={justin}
           name="Justin Mata"
+          linkedin="https://www.linkedin.com/in/justin-mata-abb612161/"
           title="Lead Software Developer"
         />
         <BioCard
           headshot={angela}
           name="Angela Pham"
+          linkedin="https://www.linkedin.com/in/angelapham01/"
           title="Software Developer"
         />
         <BioCard
           headshot={kun}
           name="Kunwarpreet Singh Bahar"
+          linkedin="https://www.linkedin.com/in/kunbehar/"
           title="Software Developer"
         />
-        <BioCard headshot={flor} name="Flor Sario" title="Data and Marketing" />
+        <BioCard
+          headshot={flor}
+          name="Flor Sario"
+          linkedin="https://www.linkedin.com/in/flori-sario/"
+          title="Data and Marketing"
+        />
       </div>
     </>
   );

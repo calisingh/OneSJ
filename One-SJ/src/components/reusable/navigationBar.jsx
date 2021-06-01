@@ -1,6 +1,7 @@
 import { Navbar, Nav } from "react-bootstrap";
 import LanguageIcon from "@material-ui/icons/Language";
 import { useLocation } from "react-router-dom";
+
 import "../../css/navigationBar.css";
 
 const NavigationBar = () => {
@@ -33,6 +34,7 @@ const NavigationBar = () => {
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
+      {/* Classes here used to keep Internationalization icon on right side */}
       <Nav className="ml-auto order-1">
         <Nav.Link href="/">
           <LanguageIcon

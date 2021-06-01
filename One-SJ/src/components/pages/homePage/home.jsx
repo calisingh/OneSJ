@@ -1,4 +1,3 @@
-import sanjose from "../../../img/SanJose.jfif";
 import { createRef } from "react";
 import Snacks from "./snacks";
 import NavigationBar from "../../reusable/navigationBar";
@@ -7,6 +6,9 @@ import WelcomeBanner from "./welcomeBanner";
 import MoreInfoBanner from "./moreInfoBanner";
 import EmergencyBanner from "./emergencyBanner";
 import Footer from "../../reusable/footer";
+
+import sanjose from "../../../img/SanJose.jfif";
+
 import "../../../css/home.css";
 
 const Home = () => {
@@ -33,6 +35,7 @@ const Home = () => {
       </div>
       <div
         style={{
+          // Creating a dimming effect for the background
           background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${sanjose})`,
           backgroundSize: "cover",
           height: "78vh",

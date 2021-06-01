@@ -7,6 +7,7 @@ import AboutUs from "./components/pages/aboutUsPage/aboutUs";
 import Disclaimer from "./components/pages/disclaimerPage/disclaimer";
 import Feedback from "./components/pages/feedbackPage/feedback";
 import Privacy from "./components/pages/privacyStatementPage/privacy";
+import "./css/app.css";
 
 /* Attempt at a react hook - temp */
 function useWindowSize() {

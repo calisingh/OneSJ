@@ -3,13 +3,14 @@ import OneSJHeader from "../../reusable/onesjHeader";
 import AboutUsParagraph from "./aboutUsParagraph";
 import MeetTheTeam from "./meetTheTeam";
 import Footer from "../../reusable/footer";
+
 import "../../../css/aboutUs.css";
 
 const AboutUs = () => {
   return (
     <>
       <NavigationBar />
-      <div className="bgGradientTop center" style={{ gap: "5rem" }}>
+      <div className="bgGradientTop center">
         <OneSJHeader />
         <AboutUsParagraph />
       </div>

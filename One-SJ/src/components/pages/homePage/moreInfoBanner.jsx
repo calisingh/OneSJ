@@ -1,18 +1,13 @@
-import logo from "../../../img/logo.png";
-import head from "../../../img/headsilhouette.svg";
 import FindServicesButton from "./findServicesButton";
 import { useHistory } from "react-router-dom";
+
+import logo from "../../../img/logo.png";
+import head from "../../../img/headsilhouette.svg";
 
 const MoreInfoBanner = () => {
   return (
     <div className="informationBanner center">
-      <div
-        id="more-info"
-        className="infoBox center"
-        style={{
-          width: "90%",
-        }}
-      >
+      <div id="more-info" className="infoBox center">
         <h3>HELP IS OUT THERE!</h3>
         <hr />
         <p>
@@ -24,20 +19,13 @@ const MoreInfoBanner = () => {
         <FindServicesButton history={useHistory()} />
       </div>
       <img
-        className="boxShadow"
+        className="home boxShadow"
         src={logo}
         style={{
-          maxWidth: "65%",
           borderRadius: "25px",
-          margin: "1rem",
         }}
       />
-      <div
-        className="infoBox center"
-        style={{
-          width: "90%",
-        }}
-      >
+      <div className="infoBox center">
         <h3>LOOKING FOR OTHER RESOURCES?</h3>
         <hr />
         <p>
@@ -47,13 +35,7 @@ const MoreInfoBanner = () => {
           available and up-to-date information in an easy-to-use user interface.
         </p>
       </div>
-      <img
-        src={head}
-        style={{
-          maxWidth: "65%",
-          margin: "1rem",
-        }}
-      />
+      <img className="home" src={head} />
     </div>
   );
 };

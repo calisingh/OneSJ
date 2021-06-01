@@ -1,7 +1,9 @@
+/* Basic styling for all navbar elements */
 .navigationBar {
   font: 1rem montserrat;
   font-weight: 300;
-  background-color: rgba(0, 127, 127, 0.95);
+  background-color: var(--darkTeal);
+  opacity: 0.95;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   width: 100%;
@@ -17,26 +19,27 @@
 }
 
 .navigationBar .navbar-nav .nav-link.active {
-  color: rgb(255, 236, 69);
+  color: var(--brightYellow);
 }
 
 /* Highlight icons on hover */
 .navigationBar .nav-link:hover .MuiSvgIcon-root {
-  color: rgb(219, 165, 34);
+  color: var(--darkYellow);
 }
 
 .navigationBar .navbar-brand:hover {
-  color: rgb(219, 165, 34);
+  color: var(--darkYellow);
 }
 
 .navigationBar .navbar-nav .nav-link:hover {
-  color: rgb(219, 165, 34);
+  color: var(--darkYellow);
 }
 
 .navigationBar .navbar-nav .nav-link.active:hover {
-  color: rgb(219, 165, 34);
+  color: var(--darkYellow);
 }
 
+/* Navigation toggler css for mobile view */
 .navbar-toggler {
   font-size: 1rem;
   background-color: white;
@@ -44,10 +47,11 @@
 }
 
 .navbar-toggler:hover {
-  background-color: rgb(219, 165, 34);
+  background-color: var(--darkYellow);
 }
 
 @media (min-width: 768px) {
+  /* Keeps Internationalization button on right */
   .navbar-collapse {
     order: 0;
   }

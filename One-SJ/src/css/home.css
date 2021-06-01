@@ -1,80 +1,4 @@
-a {
-  color: white;
-  text-align: center;
-}
-
-a:hover {
-  color: rgb(219, 165, 34);
-}
-
-span {
-  text-align: center;
-}
-
-h1 {
-  font: 6rem montserrat;
-  font-weight: 900;
-  color: white;
-  text-align: center;
-  cursor: default;
-  text-shadow: 5px 5px 0px rgba(255, 255, 255, 0.2);
-}
-
-h3 {
-  font: 1.75rem montserrat;
-  font-weight: 900;
-  text-align: center;
-  color: white;
-  cursor: default;
-  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
-}
-
-p {
-  font: 1.5rem montserrat;
-  text-align: center;
-  line-height: 1.6;
-}
-
-hr {
-  border-top: 5px solid rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-  width: 75%;
-}
-
-.textShadow {
-  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
-}
-
-.boxShadow {
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
-
-.bgGradientTop {
-  background: linear-gradient(to bottom, rgb(0, 150, 140), rgb(250, 250, 210));
-}
-
-.bgGradientBottom {
-  background: linear-gradient(to top, rgb(0, 150, 140), rgb(250, 250, 210));
-}
-
-.center {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  place-items: center;
-}
-
-.infoBox {
-  background-color: rgba(254, 215, 1, 0.1);
-  border-radius: 15px;
-  border: 2px solid rgb(0, 127, 127);
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  padding: 3rem;
-  margin: 1rem;
-}
-
+/* Styling for all the buttons on the home page (FAB = Floating Action Button) */
 .MuiFab-label {
   color: white;
   font-size: 1.25rem;
@@ -87,53 +11,60 @@ hr {
 }
 
 .MuiFab-root:hover .MuiFab-label {
-  color: rgb(219, 165, 34);
+  color: var(--darkYellow);
 }
 
-.informationBanner {
+.infoBox {
+  background-color: rgba(254, 215, 1, 0.1);
+  border-radius: 15px;
+  border: 2px solid var(--darkTeal);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 3rem;
+  margin: 1rem;
+  width: 90%;
+}
+
+/* Styling for the Information Banner */
+.center .informationBanner {
   grid-template-columns: 1fr 1fr;
   row-gap: 5rem;
   padding: 10rem 0;
 }
 
-#welcomeBanner {
+/* Styling for images on home page */
+img.home {
+  max-width: 65%;
+  margin: 1rem;
+}
+
+/* Styling for the Welcome Banner */
+.center .welcomeBanner {
   width: 75%;
 }
 
-#welcomeBannerButtonsContainer {
+.center .welcomeBannerButtonsContainer {
   width: 100%;
   grid-template-columns: 1fr 1fr;
 }
 
 @media (max-width: 1200px) {
-  .informationBanner {
+  .center .informationBanner {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 768px) {
-  #welcomeBannerButtonsContainer {
+  .center .welcomeBannerButtonsContainer {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 550px) {
-  html {
-    font-size: 85%;
-  }
-  .center {
-    gap: 0.5rem;
-  }
   .infoBox {
     margin: 0.5rem;
   }
-  h1 {
-    font-size: 5rem;
-  }
-  hr {
-    width: 100%;
-  }
-  #welcomeBanner {
+  .center .welcomeBanner {
     width: 100%;
   }
 }

@@ -5,15 +5,17 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 import { useState } from "react";
+import { GoogleMapsAPIKey } from "../../utilities/constants";
 import DirectionsIcon from "@material-ui/icons/Directions";
 
 const Map = ({ service }) => {
   const [selected, setSelected] = useState(true);
 
+  // Google library we want to use
   const libraries = ["places"];
 
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyB2i3tIi6Yn9DOzeUQJf3DUcFbFh9IOcOY",
+    googleMapsApiKey: GoogleMapsAPIKey,
     libraries,
   });
 

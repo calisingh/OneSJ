@@ -7,6 +7,7 @@ const GetStartedButton = ({ history }) => {
       size="large"
       variant="extended"
       color="secondary"
+      // Using history to direct user to different routes
       onClick={() => history.push("/services")}
     >
       <FavoriteIcon />

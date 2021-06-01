@@ -1,51 +1,23 @@
 import { Navbar } from "react-bootstrap";
+
 import logo from "../../img/logo.png";
+
 import "../../css/footer.css";
 
 const Footer = () => {
   return (
-    <Navbar className="footerContainer center boxShadow">
-      <div
-        className="center"
-        style={{
-          gridTemplateColumns: "1fr 1fr",
-        }}
-      >
-        <img
-          className="boxShadow"
-          src={logo}
-          alt=""
-          style={{
-            maxWidth: "75px",
-            borderRadius: "15px",
-          }}
-        />
+    <Navbar className="footerContainer boxShadow center">
+      <div className="footerBrandContainer center">
+        <img className="footer boxShadow" src={logo} />
         <h3>OneSJ</h3>
       </div>
-      <hr
-        style={{
-          borderTop: "5px solid rgba(255, 236, 69, 0.7)",
-          width: "50%",
-        }}
-      />
-      <div
-        className="center"
-        style={{
-          gridTemplateColumns: "1fr 1fr 1fr",
-          gap: "2rem",
-        }}
-      >
+      <hr className="footer" />
+      <div className="footerLinksContainer center">
         <a href="/privacy-statement">Privacy Policy</a>
         <a href="/disclaimer">Disclaimer</a>
         <a href="/feedback">Feedback</a>
       </div>
-      <span
-        style={{
-          color: "white",
-          font: ".75rem montserrat",
-          textAlign: "center",
-        }}
-      >
+      <span className="footer">
         Copyright © 2021 OneSJ, LLC All Rights Reserved.
       </span>
     </Navbar>

@@ -10,6 +10,7 @@ import Filter from "./filter";
 import DataDisplay from "./dataDisplay";
 import PaginationHandler, { paginate } from "./paginationHandler";
 import Footer from "../../reusable/footer";
+
 import "../../../css/services.css";
 
 // Component that renders all the data and filter components together

@@ -1,15 +1,10 @@
 const FeedbackParagraph = () => {
   return (
     <>
-      <div
-        className="center"
-        style={{
-          width: "60%",
-        }}
-      >
+      <div className="feedbackParagraphContainer center">
         <h3>Contact us!</h3>
         <hr />
-        <p className="feedback">
+        <p>
           For questions on any data additions, inaccuracies, or for any other
           comments, questions, and concerns, please contact
           one.sj.moti@gmail.com or fill out this{" "}
@@ -18,10 +13,11 @@ const FeedbackParagraph = () => {
             target="_blank"
             href="https://forms.gle/hMTFsPH2cuj8mKmr5"
           >
-            <b>form.</b>
+            <b>form</b>
           </a>
         </p>
-        <p className="feedback">
+
+        <p>
           On our web application, we provide information on mental and physical
           health resources in and around the Bay Area, you may request to access
           our data by contacting our team at one.sj.moti@gmail.com, and will try

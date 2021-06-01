@@ -1,8 +1,9 @@
 import BioCard from "./bioCard";
-import angela from "../../../img/angela_headshot.png";
-import flor from "../../../img/flor_headshot.jpeg";
+
 import justin from "../../../img/justin_headshot.png";
+import angela from "../../../img/angela_headshot.png";
 import kun from "../../../img/kun_headshot.jpg";
+import flor from "../../../img/flor_headshot.jpeg";
 
 const MeetTheTeam = () => {
   return (
@@ -11,6 +12,7 @@ const MeetTheTeam = () => {
         <h3>Meet the Team Behind OneSJ!</h3>
         <hr />
       </div>
+
       <div className="bioCardsContainer center">
         <BioCard
           headshot={justin}

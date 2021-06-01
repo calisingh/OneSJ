@@ -1,15 +1,10 @@
 const DisclaimerParagraph = () => {
   return (
     <>
-      <div
-        className="center"
-        style={{
-          width: "60%",
-        }}
-      >
+      <div className="disclaimerParagraphContainer center">
         <h3>Disclaimer</h3>
         <hr />
-        <p className="disclaimer">
+        <p>
           OneSJ is a volunteer-driven project and we work hard to keep this site
           as up-to-date and accurate as possible. Here, you can find the right
           person to talk to in San José regarding your mental health. Fill out a
@@ -26,7 +21,8 @@ const DisclaimerParagraph = () => {
           websites/resources; none of our services constitute an endorsement by
           any entity or corporation.
         </p>
-        <p className="disclaimer">
+
+        <p>
           OneSJ shall not be held liable for any errors or inaccuracies in the
           information provided, or for any decisions made or actions taken by
           the user under any circumstances. By using this application or
@@ -35,7 +31,8 @@ const DisclaimerParagraph = () => {
           from any claims resulting from your use of this application or
           website.
         </p>
-        <p className="disclaimer">
+
+        <p>
           OneSJ may modify this disclaimer at any time, without notice to you,
           by posting a revised disclaimer on this application or website.
         </p>

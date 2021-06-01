@@ -1,19 +1,10 @@
-p.disclaimer {
-  font: 1.5rem montserrat;
-  text-align: center;
-  line-height: 1.6;
-}
-
-h4.disclaimer {
-  font: 2rem montserrat;
-}
-
-.disclaimerParagraph {
+.disclaimerParagraphContainer {
+  padding: 5rem 0;
   width: 60%;
 }
 
-@media (max-width: 400px) {
-  p.disclaimer {
-    font-size: 1rem;
+@media (max-width: 550px) {
+  .disclaimerParagraphContainer {
+    width: 75%;
   }
 }

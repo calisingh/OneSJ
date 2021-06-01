@@ -1,19 +1,10 @@
-p.feedback {
-  font: 1.5rem montserrat;
-  text-align: center;
-  line-height: 1.6;
-}
-
-h4.feedback {
-  font: 2rem montserrat;
-}
-
-.feedbackParagraph {
+.feedbackParagraphContainer {
+  padding: 5rem 0;
   width: 60%;
 }
 
-@media (max-width: 500px) {
-  p.feedback {
-    font-size: 1rem;
+@media (max-width: 550px) {
+  .feedbackParagraphContainer {
+    width: 75%;
   }
 }

@@ -30,7 +30,7 @@ const MeetTheTeam = () => {
           headshot={kun}
           name="Kunwarpreet Singh Behar"
           linkedin="https://www.linkedin.com/in/kunbehar/"
-          title="Software Developer"
+          title="Software Product Manager"
         />
         <BioCard
           headshot={flor}

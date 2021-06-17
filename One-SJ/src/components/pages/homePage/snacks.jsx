@@ -1,4 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { LanguageContext } from "../../utilities/languageContext";
+import { TranslationsContext } from "../../utilities/translationsContext";
+import { emergencySnack, scrollSnack } from "../../utilities/texts";
 import Snackbar from "@material-ui/core/Snackbar";
 import SnackbarContent from "@material-ui/core/SnackbarContent";
 // Slide is the animation I am using for the snacks
@@ -24,7 +27,7 @@ const Snacks = ({ topRef, emergencyRef }) => {
     }
   };
 
-  // Calls handleScroll whenever user scrolls
+  // Calls handleScroll whenever user scrolls on home page
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, {
       passive: true,
@@ -33,6 +36,25 @@ const Snacks = ({ topRef, emergencyRef }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Translation section of code
+  const languageContext = useContext(LanguageContext);
+  const translationsContext = useContext(TranslationsContext);
+
+  // Grab current language from language context
+  const currentLanguage = languageContext.currentLanguage;
+  // Grab saved translations from translations context
+  const savedTranslations = translationsContext.translations;
+
+  // All text to be displayed goes here
+  let emergencyText = emergencySnack;
+  let scrollText = scrollSnack;
+
+  // Grab from saved translations if not English
+  if (currentLanguage !== "en") {
+    emergencyText = savedTranslations[emergencySnack + "-" + currentLanguage];
+    scrollText = savedTranslations[scrollSnack + "-" + currentLanguage];
+  }
 
   return (
     <>
@@ -56,7 +78,7 @@ const Snacks = ({ topRef, emergencyRef }) => {
           style={{
             backgroundColor: "rgb(196, 30, 58)",
           }}
-          message={"Have an emergency? Click here"}
+          message={emergencyText}
           onClick={() => {
             if (emergencyRef.current) {
               emergencyRef.current.scrollIntoView();
@@ -77,7 +99,7 @@ const Snacks = ({ topRef, emergencyRef }) => {
         }}
       >
         <SnackbarContent
-          message={"Scroll back to top"}
+          message={scrollText}
           onClick={() => {
             if (topRef.current) {
               topRef.current.scrollIntoView();

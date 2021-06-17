@@ -4,17 +4,34 @@ import Button from "react-bootstrap/Button";
 import DirectionsIcon from "@material-ui/icons/Directions";
 
 // SFC for rendering the modal when a card is clicked. This will show a more in depth description of each service
-const ModalData = ({ data, setShow, onClose }) => {
+const ModalData = ({
+  data,
+  website,
+  address,
+  getDirections,
+  phoneNumber,
+  email,
+  close,
+  setShow,
+  onClose,
+}) => {
   return (
     <Modal show={setShow} onHide={() => onClose()} size="lg" centered>
       <Modal.Header closeButton>
         <Modal.Title className="textShadow">{data.provider_name}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Map service={data} />
+        <Map
+          data={data}
+          website={website}
+          address={address}
+          getDirections={getDirections}
+          phoneNumber={phoneNumber}
+          email={email}
+        />
         <div className="center" style={{ marginTop: "1rem" }}>
           <h5>
-            Website:{" "}
+            {website + " "}
             <a
               className="data"
               rel="noopener noreferrer"
@@ -24,9 +41,7 @@ const ModalData = ({ data, setShow, onClose }) => {
               {data.provider_name}
             </a>
           </h5>
-          <h5>
-            Address: {data.address}, {data.zip}
-          </h5>
+          <h5>{address + " " + data.address + ", " + data.zip}</h5>
           <h5>
             <a
               className="data"
@@ -37,16 +52,16 @@ const ModalData = ({ data, setShow, onClose }) => {
                 data.address.replace(/ /g, "+")
               }
             >
-              Get Directions <DirectionsIcon />
+              {getDirections} <DirectionsIcon />
             </a>
           </h5>
-          <h5>Phone Number: {data.contact}</h5>
-          <h5>Email: {data.email}</h5>
+          <h5>{phoneNumber + " " + data.contact}</h5>
+          <h5>{email + " " + data.email}</h5>
         </div>
       </Modal.Body>
       <Modal.Footer>
         <Button className="modalFooterCloseButton" onClick={() => onClose()}>
-          Close
+          {close}
         </Button>
       </Modal.Footer>
     </Modal>

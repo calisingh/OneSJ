@@ -97,7 +97,7 @@ a.data:hover {
 
 /* Controls styling for cards */
 :root {
-  --card-size: 25rem;
+  --card-size: 20rem;
 }
 
 .card-deck {

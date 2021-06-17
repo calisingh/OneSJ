@@ -1,3 +1,7 @@
+import { useContext } from "react";
+import { LanguageContext } from "../../utilities/languageContext";
+import { TranslationsContext } from "../../utilities/translationsContext";
+import { previous, next } from "../../utilities/texts";
 import Pagination from "react-bootstrap/Pagination";
 import _ from "lodash";
 
@@ -15,6 +19,27 @@ const PaginationHandler = ({
   currentPage,
   onPageChange,
 }) => {
+  // Translation section of code
+  const languageContext = useContext(LanguageContext);
+  const translationsContext = useContext(TranslationsContext);
+
+  // Grab current language from language context
+  const currentLanguage = languageContext.currentLanguage;
+  // Grab saved translations from translations context
+  const savedTranslations = translationsContext.translations;
+
+  // All text to be displayed goes here
+  let previousDisplay = previous;
+  let nextDisplay = next;
+
+  // Grab from saved translations if not English
+  if (currentLanguage !== "en") {
+    previousDisplay = savedTranslations[previous + "-" + currentLanguage];
+    nextDisplay = savedTranslations[next + "-" + currentLanguage];
+  }
+
+  // Logic section of code
+
   // Don't render if there are no items being displayed
   if (itemCount === 0) return null;
 
@@ -28,11 +53,10 @@ const PaginationHandler = ({
   const pages = _.range(1, pageCount + 1);
 
   return (
-    // Same thing as mentioned in the dataDisplay file. Refer to that for explanation on why I am putting styling in here.
     <Pagination
       className="boxShadow"
       style={{
-        marginBottom: "2rem",
+        margin: "5rem 0",
       }}
     >
       <Pagination.Prev
@@ -40,7 +64,7 @@ const PaginationHandler = ({
           onPageChange(currentPage - 1 < 1 ? currentPage : currentPage - 1)
         }
       >
-        Prev
+        {previousDisplay}
       </Pagination.Prev>
       {/* Create a button for each possible page */}
       {pages.map((page) => (
@@ -59,7 +83,7 @@ const PaginationHandler = ({
           )
         }
       >
-        Next
+        {nextDisplay}
       </Pagination.Next>
     </Pagination>
   );

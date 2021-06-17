@@ -1,3 +1,12 @@
+import { useContext } from "react";
+import { LanguageContext } from "../../utilities/languageContext";
+import { TranslationsContext } from "../../utilities/translationsContext";
+import {
+  moreInfoBannerHeader1,
+  moreInfoBannerParagraph1,
+  moreInfoBannerHeader2,
+  moreInfoBannerParagraph2,
+} from "../../utilities/texts";
 import FindServicesButton from "./findServicesButton";
 import { useHistory } from "react-router-dom";
 
@@ -5,17 +14,37 @@ import logo from "../../../img/logo.png";
 import head from "../../../img/headsilhouette.svg";
 
 const MoreInfoBanner = () => {
+  // Translation section of code
+  const languageContext = useContext(LanguageContext);
+  const translationsContext = useContext(TranslationsContext);
+
+  // Grab current language from language context
+  const currentLanguage = languageContext.currentLanguage;
+  // Grab saved translations from translations context
+  const savedTranslations = translationsContext.translations;
+
+  // All text to be displayed goes here
+  let header1 = moreInfoBannerHeader1;
+  let paragraph1 = moreInfoBannerParagraph1;
+  let header2 = moreInfoBannerHeader2;
+  let paragraph2 = moreInfoBannerParagraph2;
+
+  // Grab from saved translations if not English
+  if (currentLanguage !== "en") {
+    header1 = savedTranslations[moreInfoBannerHeader1 + "-" + currentLanguage];
+    paragraph1 =
+      savedTranslations[moreInfoBannerParagraph1 + "-" + currentLanguage];
+    header2 = savedTranslations[moreInfoBannerHeader2 + "-" + currentLanguage];
+    paragraph2 =
+      savedTranslations[moreInfoBannerParagraph2 + "-" + currentLanguage];
+  }
+
   return (
     <div className="informationBanner center">
       <div id="more-info" className="infoBox center">
-        <h3>HELP IS OUT THERE!</h3>
+        <h3>{header1}</h3>
         <hr />
-        <p>
-          OneSJ is a website that points youth/young adults in San José to
-          relevant mental health support options. On our website, we provide
-          information on mental and physical health resources in and around the
-          Bay Area, which is updated every month.
-        </p>
+        <p>{paragraph1}</p>
         <FindServicesButton history={useHistory()} />
       </div>
       <img
@@ -26,14 +55,9 @@ const MoreInfoBanner = () => {
         }}
       />
       <div className="infoBox center">
-        <h3>LOOKING FOR OTHER RESOURCES?</h3>
+        <h3>{header2}</h3>
         <hr />
-        <p>
-          Other categories are in-progress! We plan to eventually expand with
-          other categories of services such as food, housing, and financial
-          support. We are working with our partners to bring together the best
-          available and up-to-date information in an easy-to-use user interface.
-        </p>
+        <p>{paragraph2}</p>
       </div>
       <img className="home" src={head} />
     </div>

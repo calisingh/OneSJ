@@ -1,4 +1,35 @@
+import { useContext } from "react";
+import { LanguageContext } from "../../utilities/languageContext";
+import { TranslationsContext } from "../../utilities/translationsContext";
+import {
+  emergencyBannerHeader,
+  emergencyBannerParagraph,
+  call,
+} from "../../utilities/texts";
+
 const EmergencyBanner = () => {
+  // Translation section of code
+  const languageContext = useContext(LanguageContext);
+  const translationsContext = useContext(TranslationsContext);
+
+  // Grab current language from language context
+  const currentLanguage = languageContext.currentLanguage;
+  // Grab saved translations from translations context
+  const savedTranslations = translationsContext.translations;
+
+  // All text to be displayed goes here
+  let header = emergencyBannerHeader;
+  let paragraph = emergencyBannerParagraph;
+  let callDisplay = call;
+
+  // Grab from saved translations if not English
+  if (currentLanguage !== "en") {
+    header = savedTranslations[emergencyBannerHeader + "-" + currentLanguage];
+    paragraph =
+      savedTranslations[emergencyBannerParagraph + "-" + currentLanguage];
+    callDisplay = savedTranslations[call + "-" + currentLanguage];
+  }
+
   return (
     <>
       <p
@@ -9,15 +40,9 @@ const EmergencyBanner = () => {
         }}
       >
         <i>
-          <b>
-            If you are experiencing a crisis or have an emergency, please call
-            911.
-          </b>
+          <b>{header}</b>
           <br />
-          Many of the services listed on this website will not respond
-          immediately. If you or a loved one are experiencing suicidal thoughts,
-          please call the National Suicide Prevention Lifeline. The Lifeline
-          provides 24/7, free and confidential support for people in distress.
+          {paragraph}
         </i>
       </p>
       <a
@@ -28,7 +53,7 @@ const EmergencyBanner = () => {
           fontWeight: "bold",
         }}
       >
-        Call: 1-800-273-8255
+        {callDisplay}
       </a>
     </>
   );

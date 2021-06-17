@@ -1,32 +1,57 @@
+import { useContext } from "react";
+import { LanguageContext } from "../../utilities/languageContext";
+import { TranslationsContext } from "../../utilities/translationsContext";
+import {
+  feedbackHeader1,
+  feedbackParagraph1,
+  form,
+  feedbackParagraph2,
+} from "../../utilities/texts";
+
 const FeedbackParagraph = () => {
+  // Translation section of code
+  const languageContext = useContext(LanguageContext);
+  const translationsContext = useContext(TranslationsContext);
+
+  // Grab current language from language context
+  const currentLanguage = languageContext.currentLanguage;
+  // Grab saved translations from translations context
+  const savedTranslations = translationsContext.translations;
+
+  // All text to be displayed goes here
+  let contactUsHeader = feedbackHeader1;
+  let questionsParagraph = feedbackParagraph1;
+  let formDisplay = form;
+  let contactUsParagraph = feedbackParagraph2;
+
+  // Grab from saved translations if not English
+  if (currentLanguage !== "en") {
+    contactUsHeader =
+      savedTranslations[feedbackHeader1 + "-" + currentLanguage];
+    questionsParagraph =
+      savedTranslations[feedbackParagraph1 + "-" + currentLanguage];
+    formDisplay = savedTranslations[form + "-" + currentLanguage];
+    contactUsParagraph =
+      savedTranslations[feedbackParagraph2 + "-" + currentLanguage];
+  }
+
   return (
     <>
       <div className="feedbackParagraphContainer center">
-        <h3>Contact us!</h3>
+        <h3>{contactUsHeader}</h3>
         <hr />
         <p>
-          For questions on any data additions, inaccuracies, or for any other
-          comments, questions, and concerns, please contact
-          one.sj.moti@gmail.com or fill out this{" "}
+          {questionsParagraph + " "}
           <a
             rel="noopener noreferrer"
             target="_blank"
             href="https://forms.gle/hMTFsPH2cuj8mKmr5"
           >
-            <b>form</b>
+            <b>{formDisplay} </b>
           </a>
         </p>
 
-        <p>
-          On our web application, we provide information on mental and physical
-          health resources in and around the Bay Area, you may request to access
-          our data by contacting our team at one.sj.moti@gmail.com, and will try
-          to get back to you as soon as possible. The open-source code for OneSJ
-          is protected under the GNU General Public License V3.0. Permissions of
-          this strong copyleft license are conditioned on making available
-          complete source code of licensed works and modifications, which
-          include larger works using a licensed work, under the same license.
-        </p>
+        <p>{contactUsParagraph}</p>
       </div>
     </>
   );

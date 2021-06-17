@@ -1,21 +1,21 @@
+import { useState } from "react";
 import {
   GoogleMap,
   useLoadScript,
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-import { useState } from "react";
-import { GoogleMapsAPIKey } from "../../utilities/constants";
+import { GoogleAPIKey } from "../../utilities/constants";
 import DirectionsIcon from "@material-ui/icons/Directions";
 
-const Map = ({ service }) => {
+// Google library we want to use
+const libraries = ["places"];
+
+const Map = ({ data, website, address, getDirections, phoneNumber, email }) => {
   const [selected, setSelected] = useState(true);
 
-  // Google library we want to use
-  const libraries = ["places"];
-
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: GoogleMapsAPIKey,
+    googleMapsApiKey: GoogleAPIKey,
     libraries,
   });
 
@@ -29,8 +29,8 @@ const Map = ({ service }) => {
   };
 
   const center = {
-    lat: service.lat ? service.lat : 37.3382,
-    lng: service.lon ? service.lon : -121.8863,
+    lat: data.lat ? data.lat : 37.3382,
+    lng: data.lon ? data.lon : -121.8863,
   };
 
   return (
@@ -43,7 +43,7 @@ const Map = ({ service }) => {
     >
       <Marker
         position={center}
-        title={service.provider_name}
+        title={data.provider_name}
         onClick={() => setSelected(!selected)}
       />
       {selected ? (
@@ -53,34 +53,33 @@ const Map = ({ service }) => {
           options={{ pixelOffset: new window.google.maps.Size(0, -40) }}
         >
           <div className="center">
-            <h4>{service.provider_name}</h4>
-            <h6>
-              Website:{" "}
+            <h5>
+              {website + " "}
               <a
                 className="data"
                 rel="noopener noreferrer"
                 target="_blank"
-                href={service.web_link}
+                href={data.web_link}
               >
-                {service.provider_name}
+                {data.provider_name}
               </a>
-            </h6>
-            <h6>Address: {service.address}</h6>
-            <h6>
+            </h5>
+            <h5>{address + " " + data.address + ", " + data.zip}</h5>
+            <h5>
               <a
                 className="data"
                 rel="noopener noreferrer"
                 target="_blank"
                 href={
                   "https://www.google.com/maps/dir//" +
-                  service.address.replace(/ /g, "+")
+                  data.address.replace(/ /g, "+")
                 }
               >
-                Get Directions <DirectionsIcon />
+                {getDirections} <DirectionsIcon />
               </a>
-            </h6>
-            <h6>Phone Number: {service.contact}</h6>
-            <h6>Email: {service.email}</h6>
+            </h5>
+            <h5>{phoneNumber + " " + data.contact}</h5>
+            <h5>{email + " " + data.email}</h5>
           </div>
         </InfoWindow>
       ) : null}

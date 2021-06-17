@@ -1,83 +1,151 @@
+import { useContext } from "react";
+import { LanguageContext } from "../../utilities/languageContext";
+import { TranslationsContext } from "../../utilities/translationsContext";
+import {
+  privacyHeader1,
+  privacyParagraph1,
+  privacyHeader2,
+  privacyParagraph2,
+  privacyHeader3,
+  privacyParagraph3,
+  privacyHeader4,
+  privacyParagraph4,
+  privacyBullet1,
+  privacyBullet2,
+  privacyBullet3,
+  privacyBullet4,
+  privacyBullet5,
+  privacyHeader5,
+  privacyParagraph5,
+  privacyParagraph6,
+  privacyHeader6,
+  privacyParagraph7,
+  privacyHeader7,
+  privacyParagraph8,
+  privacyParagraph9,
+} from "../../utilities/texts";
+
 const PrivacyParagraph = () => {
+  // Translation section of code
+  const languageContext = useContext(LanguageContext);
+  const translationsContext = useContext(TranslationsContext);
+
+  // Grab current language from language context
+  const currentLanguage = languageContext.currentLanguage;
+  // Grab saved translations from translations context
+  const savedTranslations = translationsContext.translations;
+
+  // All text to be displayed goes here
+  let privacyHeader = privacyHeader1;
+  let privacyParagraph = privacyParagraph1;
+
+  let consentHeader = privacyHeader2;
+  let consentParagraph = privacyParagraph2;
+
+  let informationHeader = privacyHeader3;
+  let informationParagraph = privacyParagraph3;
+
+  let howWeUseInfoHeader = privacyHeader4;
+  let howWeUseInfoParagraph = privacyParagraph4;
+  let howWeUseInfoItem1 = privacyBullet1;
+  let howWeUseInfoItem2 = privacyBullet2;
+  let howWeUseInfoItem3 = privacyBullet3;
+  let howWeUseInfoItem4 = privacyBullet4;
+  let howWeUseInfoItem5 = privacyBullet5;
+
+  let thirdPartyHeader = privacyHeader5;
+  let thirdPartyParagraph1 = privacyParagraph5;
+  let thirdPartyParagraph2 = privacyParagraph6;
+
+  let logHeader = privacyHeader6;
+  let logParagraph = privacyParagraph7;
+
+  let minorInfoHeader = privacyHeader7;
+  let minorInfoParagraph1 = privacyParagraph8;
+  let minorInfoParagraph2 = privacyParagraph9;
+
+  // Grab from saved translations if not English
+  if (currentLanguage !== "en") {
+    privacyHeader = savedTranslations[privacyHeader1 + "-" + currentLanguage];
+    privacyParagraph =
+      savedTranslations[privacyParagraph1 + "-" + currentLanguage];
+
+    consentHeader = savedTranslations[privacyHeader2 + "-" + currentLanguage];
+    consentParagraph =
+      savedTranslations[privacyParagraph2 + "-" + currentLanguage];
+
+    informationHeader =
+      savedTranslations[privacyHeader3 + "-" + currentLanguage];
+    informationParagraph =
+      savedTranslations[privacyParagraph3 + "-" + currentLanguage];
+
+    howWeUseInfoHeader =
+      savedTranslations[privacyHeader4 + "-" + currentLanguage];
+    howWeUseInfoParagraph =
+      savedTranslations[privacyParagraph4 + "-" + currentLanguage];
+    howWeUseInfoItem1 =
+      savedTranslations[privacyBullet1 + "-" + currentLanguage];
+    howWeUseInfoItem2 =
+      savedTranslations[privacyBullet2 + "-" + currentLanguage];
+    howWeUseInfoItem3 =
+      savedTranslations[privacyBullet3 + "-" + currentLanguage];
+    howWeUseInfoItem4 =
+      savedTranslations[privacyBullet4 + "-" + currentLanguage];
+    howWeUseInfoItem5 =
+      savedTranslations[privacyBullet5 + "-" + currentLanguage];
+
+    thirdPartyHeader =
+      savedTranslations[privacyHeader5 + "-" + currentLanguage];
+    thirdPartyParagraph1 =
+      savedTranslations[privacyParagraph5 + "-" + currentLanguage];
+    thirdPartyParagraph2 =
+      savedTranslations[privacyParagraph6 + "-" + currentLanguage];
+
+    logHeader = savedTranslations[privacyHeader6 + "-" + currentLanguage];
+    logParagraph = savedTranslations[privacyParagraph7 + "-" + currentLanguage];
+
+    minorInfoHeader = savedTranslations[privacyHeader7 + "-" + currentLanguage];
+    minorInfoParagraph1 =
+      savedTranslations[privacyParagraph8 + "-" + currentLanguage];
+    minorInfoParagraph2 =
+      savedTranslations[privacyParagraph9 + "-" + currentLanguage];
+  }
+
   return (
     <>
       <div className="privacyContainer center">
-        <h3>Privacy Statement</h3>
+        <h3>{privacyHeader}</h3>
         <hr />
-        <p>
-          At OneSJ.org, one of our main priorities is the privacy of our
-          visitors. This Privacy Policy document contains types of information
-          that is collected and recorded by OneSJ and how we use it. If you have
-          additional questions or require more information about our Privacy
-          Policy, do not hesitate to contact us.
-        </p>
+        <p>{privacyParagraph}</p>
 
-        <h4>Consent</h4>
-        <p>
-          By using our website, you hereby consent to our Privacy Policy and
-          agree to the terms.
-        </p>
+        <h4>{consentHeader}</h4>
+        <p>{consentParagraph}</p>
 
-        <h4>Information we collect</h4>
-        <p>
-          No personal information is asked for the user to provide. If you
-          contact us directly, we may receive additional information about you
-          such as your name, email address, phone number, the contents of the
-          message and/or attachments you may send us, and any other information
-          you may choose to provide.
-        </p>
+        <h4>{informationHeader}</h4>
+        <p>{informationParagraph}</p>
 
-        <h4>How we use your information</h4>
+        <h4>{howWeUseInfoHeader}</h4>
         <p>
-          We use the information we collect in various ways, including to:
+          {howWeUseInfoParagraph}
           <ul>
-            <li>Provide, operate, and maintain our website</li>
-            <li>Improve, personalize, and expand our website</li>
-            <li>Understand and analyze how you use our website</li>
-            <li>Develop new products, services, features, and functionality</li>
-            <li>Find and prevent fraud</li>
+            <li>{howWeUseInfoItem1}</li>
+            <li>{howWeUseInfoItem2}</li>
+            <li>{howWeUseInfoItem3}</li>
+            <li>{howWeUseInfoItem4}</li>
+            <li>{howWeUseInfoItem5}</li>
           </ul>
         </p>
 
-        <h4>Third-Party Privacy Policies</h4>
-        <p>
-          OneSJ's Privacy Policy does not apply to other advertisers or
-          websites. Thus, we are advising you to consult the respective Privacy
-          Policies of these third-party ad servers for more detailed
-          information. It may include their practices and instructions about how
-          to opt-out of certain options.
-        </p>
-        <p>
-          You can choose to disable cookies through your individual browser
-          options. To know more detailed information about cookie management
-          with specific web browsers, it can be found at the browsers'
-          respective websites.
-        </p>
+        <h4>{thirdPartyHeader}</h4>
+        <p>{thirdPartyParagraph1}</p>
+        <p>{thirdPartyParagraph2}</p>
 
-        <h4>Log Files</h4>
-        <p>
-          OneSJ follows a standard procedure of using log files. These files log
-          visitors when they visit websites. All hosting companies do this and a
-          part of hosting services' analytics. The information collected by log
-          files includes referring/exit pages, time spent on the website, and
-          the number of clicks on the components. The purpose of the information
-          is for analyzing trends, administering the site, and tracking users'
-          movement on the website.
-        </p>
+        <h4>{logHeader}</h4>
+        <p>{logParagraph}</p>
 
-        <h4>Minor Information</h4>
-        <p>
-          Another part of our priority is adding protection for minors using the
-          site. We encourage parents and guardians to observe, participate in,
-          and/or monitor and guide their online activity.
-        </p>
-        <p>
-          OneSJ does not knowingly collect any Personal Identifiable Information
-          from children. If you think that your child provided this kind of
-          information on our website, we strongly encourage you to contact us
-          immediately and we will do our best efforts to promptly remove such
-          information from our records.
-        </p>
+        <h4>{minorInfoHeader}</h4>
+        <p>{minorInfoParagraph1}</p>
+        <p>{minorInfoParagraph2}</p>
       </div>
     </>
   );

@@ -20,13 +20,7 @@ const Home = () => {
       {/* Snacks are the pop ups that appear on the home page */}
       <Snacks topRef={top} emergencyRef={emergency} />
       <NavigationBar />
-      <div
-        className="center bgGradientTop"
-        ref={top}
-        style={{
-          height: "95vh",
-        }}
-      >
+      <div className="center bgGradientTop" ref={top}>
         <OneSJHeader />
         <WelcomeBanner />
       </div>
@@ -38,7 +32,7 @@ const Home = () => {
           // Creating a dimming effect for the background
           background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${sanjose})`,
           backgroundSize: "cover",
-          height: "78vh",
+          height: "85vh",
         }}
       >
         <div

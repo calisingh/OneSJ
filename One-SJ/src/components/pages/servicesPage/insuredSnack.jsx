@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { LanguageContext } from "../../utilities/languageContext";
+import { TranslationsContext } from "../../utilities/translationsContext";
+import { insuredSnack } from "../../utilities/texts";
 import Snackbar from "@material-ui/core/Snackbar";
 import SnackbarContent from "@material-ui/core/SnackbarContent";
 // Slide is the animation I am using for the snacks
@@ -9,6 +12,23 @@ import "../../../css/snacks.css";
 // Controls the pop ups for the home page
 const InsuredSnack = () => {
   const [active, setActive] = useState(true);
+
+  // Translation section of code
+  const languageContext = useContext(LanguageContext);
+  const translationsContext = useContext(TranslationsContext);
+
+  // Grab current language from language context
+  const currentLanguage = languageContext.currentLanguage;
+  // Grab saved translations from translations context
+  const savedTranslations = translationsContext.translations;
+
+  // All text to be displayed goes here
+  let text = insuredSnack;
+
+  // Grab fromm saved translations if not English
+  if (currentLanguage !== "en") {
+    text = savedTranslations[insuredSnack + "-" + currentLanguage];
+  }
 
   return (
     <>
@@ -32,7 +52,7 @@ const InsuredSnack = () => {
           style={{
             backgroundColor: "rgb(2,117,216)",
           }}
-          message={"Uninsured? Click here"}
+          message={text}
           onClick={() => {
             setActive(false);
             window.open(

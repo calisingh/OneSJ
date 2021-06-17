@@ -12,7 +12,7 @@ export const categoriesapiLink = process.env.REACT_APP_CATEGORIES_API_LINK;
 // Make sure to switch to localhost version of api key if working on the code
 // The production API key is used before releasing changes to the domain
 // If making a production build remember to remove the Localhost API key from the .env file as it can get leaked
-export const GoogleAPIKey = process.env.REACT_APP_GOOGLE_API_KEY_PRODUCTION;
+export const GoogleAPIKey = process.env.REACT_APP_GOOGLE_API_KEY_LOCALHOST;
 
 const { Translate } = require("@google-cloud/translate").v2;
 

@@ -97,19 +97,19 @@ const NavigationBar = () => {
               const translatedNotes = responses[0];
               for (let i = 0; i < notes.length; i++) {
                 savedTranslations[notes[i] + "-" + newLanguage] =
-                  translatedNotes[i];
+                  translatedNotes[i].translatedText;
               }
               // Store translated category names
               const translatedCategoryNames = responses[1];
               for (let i = 0; i < categoryNames.length; i++) {
                 savedTranslations[categoryNames[i] + "-" + newLanguage] =
-                  translatedCategoryNames[i];
+                  translatedCategoryNames[i].translatedText;
               }
               // Store all translated texts
               const translatedTexts = responses[2];
               for (let i = 0; i < allTexts.length; i++) {
                 savedTranslations[allTexts[i] + "-" + newLanguage] =
-                  translatedTexts[i];
+                  translatedTexts[i].translatedText;
               }
 
               // Store all the new translations into translationsContext and session storage
@@ -143,19 +143,19 @@ const NavigationBar = () => {
             const translatedNotes = responses[0];
             for (let i = 0; i < notes.length; i++) {
               savedTranslations[notes[i] + "-" + newLanguage] =
-                translatedNotes[i];
+                translatedNotes[i].translatedtext;
             }
             // Store translated category names
             const translatedCategoryNames = responses[1];
             for (let i = 0; i < categoryNames.length; i++) {
               savedTranslations[categoryNames[i] + "-" + newLanguage] =
-                translatedCategoryNames[i];
+                translatedCategoryNames[i].translatedtext;
             }
             // Store all translated texts
             const translatedTexts = responses[2];
             for (let i = 0; i < allTexts.length; i++) {
               savedTranslations[allTexts[i] + "-" + newLanguage] =
-                translatedTexts[i];
+                translatedTexts[i].translatedtext;
             }
 
             // Store all the new translations into translationsContext and session storage

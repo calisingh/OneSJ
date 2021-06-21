@@ -14,16 +14,21 @@ export const categoriesapiLink = process.env.REACT_APP_CATEGORIES_API_LINK;
 // If making a production build remember to remove the Localhost API key from the .env file as it can get leaked
 export const GoogleAPIKey = process.env.REACT_APP_GOOGLE_API_KEY_LOCALHOST;
 
-const { Translate } = require("@google-cloud/translate").v2;
-
-const client = new Translate({
-  key: GoogleAPIKey,
+/* global gapi */
+// Comment above is to tell esLint that gapi is a const and not to throw any errors
+// Load the Google API Client and set the API Key
+gapi.load("client", async () => {
+  await gapi.client.setApiKey(GoogleAPIKey);
 });
 
 // Translates texts using Google Translate API
 export async function translateTexts(texts, language) {
-  const translations = await client.translate(texts, language);
-  return translations[0];
+  const translations = await gapi.client.request({
+    path: "https://translation.googleapis.com/language/translate/v2",
+    method: "POST",
+    body: { source: "en", target: language, q: texts },
+  });
+  return translations.result.data.translations;
 }
 
 // Fetches the data and categories

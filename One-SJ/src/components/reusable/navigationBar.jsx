@@ -143,19 +143,19 @@ const NavigationBar = () => {
             const translatedNotes = responses[0];
             for (let i = 0; i < notes.length; i++) {
               savedTranslations[notes[i] + "-" + newLanguage] =
-                translatedNotes[i].translatedtext;
+                translatedNotes[i].translatedText;
             }
             // Store translated category names
             const translatedCategoryNames = responses[1];
             for (let i = 0; i < categoryNames.length; i++) {
               savedTranslations[categoryNames[i] + "-" + newLanguage] =
-                translatedCategoryNames[i].translatedtext;
+                translatedCategoryNames[i].translatedText;
             }
             // Store all translated texts
             const translatedTexts = responses[2];
             for (let i = 0; i < allTexts.length; i++) {
               savedTranslations[allTexts[i] + "-" + newLanguage] =
-                translatedTexts[i].translatedtext;
+                translatedTexts[i].translatedText;
             }
 
             // Store all the new translations into translationsContext and session storage

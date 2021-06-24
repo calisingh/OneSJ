@@ -13,7 +13,7 @@ const BioCard = ({ headshot, name, linkedin, title }) => {
       <h4>{name}</h4>
       <IconButton
         className="socialButton"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
         href={linkedin}
       >

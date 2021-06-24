@@ -119,12 +119,13 @@ const servicesPageTexts = [
 // About Us Paragraph
 export const aboutUsHeader1 = "Get More Info On OneSJ";
 export const aboutUsHeader2 = "Who we are?";
-export const aboutUsParagraph1 =
+export const aboutUsParagraph1_1 =
   "We are a volunteer-driven, open-source project to help youth communities access information and resources on mental health. " +
   "We currently feature resources focus on youth and young adult mental health but we plan to expand to food assistance, shelters, clothing, " +
   "and financial help. You can find more information on the project, including the source code for replicating OneSJ on our Github page. " +
-  "We are affiliated with Mayor Sam Liccardo’s Office of Technology and Innovation (MOTI), " +
-  "which leverages technology to improve our residents’ livelihoods and opportunities with an emphasis on inclusion, equity, and antifragility.";
+  "We are affiliated with Mayor Sam Liccardo’s Office of Technology and Innovation (";
+export const aboutUsParagraph1_2 =
+  "), which leverages technology to improve our residents’ livelihoods and opportunities with an emphasis on inclusion, equity, and antifragility.";
 export const aboutUsParagraph2 =
   "We’ve grown with the support of Mayor Sam Liccardo’s Digital Action Corps, " +
   "an initiative which enables homegrown innovation talent to solve city problems.";
@@ -134,11 +135,19 @@ export const aboutUsParagraph3 =
   "some of whom may have exacerbated inequities around internet quality and device access; focused around the youth, " +
   "it has the potential to become a powerhouse in which the youth of the Bay Area can use to their advantage and get help when they need it.";
 export const aboutUsHeader4 = "Thanks!";
-export const aboutUsParagraph4 =
-  "Special thanks to CARTO for powering our site, Mayor Sam Liccardo for bringing us together through the Digital Action Corps, " +
-  "BayAreaCommunity.org and unBox for providing us access to services data and your engineering/design feedback, Code for San José for your " +
-  "insights on designing for accessibility, and Google.org, SAP, and PayPal for providing mentorship and helpful feedback, " +
-  "and the community members who shared their pain points with us and tested the product.";
+export const aboutUsParagraph4_1 = "Special thanks to";
+export const aboutUsParagraph4_2 =
+  "for powering our site, Mayor Sam Liccardo for bringing us together through the Digital Action Corps,";
+export const aboutUsParagraph4_3 = "and";
+export const aboutUsParagraph4_4 =
+  "for providing us access to services data and your engineering/design feedback,";
+export const aboutUsParagraph4_5 =
+  "for your insights on designing for accessibility, and";
+export const aboutUsParagraph4_6 = ",";
+export const aboutUsParagraph4_7 = ", and";
+export const aboutUsParagraph4_8 =
+  "for providing mentorship and helpful feedback, and the community members who shared their pain points with us and tested the product.";
+
 // Meet the Team
 export const meetTheTeamHeader = "Meet the Team Behind OneSJ!";
 export const leadSoftwareDeveloper = "Lead Software Developer";
@@ -149,12 +158,20 @@ export const dataAndMarketing = "Data and Marketing";
 const allAboutUsPageTexts = [
   aboutUsHeader1,
   aboutUsHeader2,
-  aboutUsParagraph1,
+  aboutUsParagraph1_1,
+  aboutUsParagraph1_2,
   aboutUsParagraph2,
   aboutUsHeader3,
   aboutUsParagraph3,
   aboutUsHeader4,
-  aboutUsParagraph4,
+  aboutUsParagraph4_1,
+  aboutUsParagraph4_2,
+  aboutUsParagraph4_3,
+  aboutUsParagraph4_4,
+  aboutUsParagraph4_5,
+  aboutUsParagraph4_6,
+  aboutUsParagraph4_7,
+  aboutUsParagraph4_8,
   meetTheTeamHeader,
   leadSoftwareDeveloper,
   softwareDeveloper,

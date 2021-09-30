@@ -1,5 +1,5 @@
 # Who we are?
-We are a volunteer-driven, open-source project to help youth communities access information and resources on mental health. We currently feature resources focused on youth and young adult mental health, but we plan to expand to  food assistance, shelters, clothing, and financial help. You can find more information on the project, including the source code for replicating OneSJ, on our Github page. 
+OneSJ is a volunteer-driven, open-source project to help youth communities access information and resources on mental health. We currently feature resources focused on youth and young adult mental health, but we plan to expand to  food assistance, shelters, clothing, and financial help. You can find more information on the project, including the source code for replicating OneSJ, on our Github page. 
 
 We’ve grown with the support of Mayor Sam Liccardo’s Digital Action Corps, an initiative which enables homegrown innovation talent to solve city problems. 
 

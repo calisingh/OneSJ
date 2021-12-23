@@ -1,7 +1,7 @@
 # Who we are?
 OneSJ is a volunteer-driven, open-source project to help youth communities access information and resources on mental health. We currently feature resources focused on youth and young adult mental health, but we plan to expand to  food assistance, shelters, clothing, and financial help. You can find more information on the project, including the source code for replicating OneSJ, on our Github page. 
 
-We’ve grown with the support of Mayor Sam Liccardo’s Digital Action Corps, an initiative which enables homegrown innovation talent to solve city problems. 
+We’ve grown with the support of Mayor Sam Liccardo’s Digital Action Corps, an initiative that enables homegrown innovation talent to solve city problems. 
 
 ## About the product.
 OneSJ is a web-application for potentially the 1 million residents of San Jose, some of whom may have exacerbated inequities around internet quality and device access; focused around the youth, it has the potential to become a powerhouse in which the youth of the Bay Area can use to their advantage and get help when they need it.
